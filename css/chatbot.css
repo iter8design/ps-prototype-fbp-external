@@ -1,0 +1,165 @@
+.webchat--css-rtvka-l3b7uo.webchat__initialsAvatar:not(.webchat__initialsAvatar--fromUser) {
+    background-color: #38414d;
+}
+
+#live-chat-window {
+    /************************************************************
+      We want to hide the Chat window on form load
+    ************************************************************/
+    display: none;
+
+    border: solid black 2px;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    /* DO I need this */
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    z-index: 9999;
+    /* Always ontop */
+}
+
+#live-chat-box {
+    position: fixed;
+
+    height: calc(100% - 81px);
+    width: 400px;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#live-chat-window-header {
+    height: 50px;
+    width: 400px;
+    overflow: hidden;
+    /* DO I need this */
+    border-bottom: solid black 2px;
+    /* format the font of the header text */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    background-color: rgb(0, 0, 83);
+    color: white;
+}
+
+#live-chat-window-header-title {
+    display: block;
+    height: 50px;
+    width: 345px;
+
+    /************************************************************
+      If the content of this header is bigger then teh space 
+      provided hide the overflow of text 
+    ************************************************************/
+    overflow: hidden;
+
+    float: left;
+    /* Poistion it on the left side */
+
+    /* Add a border line just to the right of the close button */
+    /*border-right:solid white 2px; */
+}
+
+#live-chat-window-Header-Title-Text {
+    display: block;
+    height: inherit;
+    width: inherit;
+
+    /* Lets get the text positioned correctly in the span */
+    text-align: left;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+
+
+#live-chat-window-close {
+    /************************************************************ 
+      controls the div that defines the Minimize and Close buttons 
+    ************************************************************/
+    display: block;
+
+    /* Add a border line just to the left of the close button */
+    /* border-left:solid black 2px; */
+
+    height: 50px;
+    width: 50px;
+    padding-bottom: 12px;
+}
+
+#live-chat-window-close i {
+    font-size: 24px;
+    color: inherit;
+    padding-left: 1px;
+}
+
+/*******************************************************
+     live-engage-button and sub components formatting 
+  *******************************************************/
+#live-engage-button {
+    height: 70px;
+    width: 300px;
+    overflow: hidden;
+    background-color: #38414d;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    z-index: 9999;
+}
+
+/*******************************************
+     This is the span that holds the text of 
+     the chat Button
+   *******************************************/
+#live-engage-button-icon {
+    display: block;
+    height: inherit;
+    width: 50px;
+    overflow: hidden;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/******************************************
+      Format the FontAwsome Icons
+   ******************************************/
+#live-engage-button-icon i {
+    font-size: 26px;
+    color: white;
+    height: 50px;
+    padding-top: 5px;
+}
+
+/******************************************
+      This is the DIV that holds the Chat 
+      button text
+   ******************************************/
+#live-engage-button-text {
+    overflow: hidden;
+    float: right;
+    height: inherit;
+    width: 145px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#live-engage-button-text span {
+    display: block;
+    height: inherit;
+    width: inherit;
+
+    /* Lets get the text positioned correctly in the span */
+    text-align: left;
+    padding-top: 18px;
+    padding-right: 5px;
+    padding-left: 5px;
+}

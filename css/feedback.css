@@ -1,0 +1,88 @@
+#helpBtn {
+    padding: 10px 8px;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    position: fixed;
+    outline: none;
+    z-index: 10;
+    top: 50%;
+    right: 15px;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 1.9em;
+}
+
+
+
+h2 {
+    font-size: 28px;
+}
+
+.radio-indent {
+    margin-left: 55px;
+}
+
+:not(#wb-srch) form {
+    font-size: 22px;
+    line-height: 2;
+}
+
+label {
+    font-weight: normal;
+
+}
+
+.nav-button {
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding-left: 2px;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    padding-right: 2px;
+    background: rgb(239, 239, 239);
+    /* Old browsers */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(239, 239, 239, 1) 1%, rgba(247, 247, 247, 1) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, rgba(239, 239, 239, 1)), color-stop(100%, rgba(247, 247, 247, 1)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(239, 239, 239, 1) 1%, rgba(247, 247, 247, 1) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(239, 239, 239, 1) 1%, rgba(247, 247, 247, 1) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(239, 239, 239, 1) 1%, rgba(247, 247, 247, 1) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(239, 239, 239, 1) 1%, rgba(247, 247, 247, 1) 100%);
+    /* W3C */
+    clear: both;
+}
+
+.cn-certification {
+    background-color: #ffffcc;
+    padding: 20px;
+    margin-bottom: 1em;
+    box-shadow: 3px 3px 5px #888;
+    border: 1px solid #ffcc33;
+    vertical-align: middle;
+}
+
+.cn-certification input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.checkbox-standalone {
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.help-block {
+    color: #777;
+    font-size: 0.8em;
+}
