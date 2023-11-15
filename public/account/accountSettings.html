@@ -79,6 +79,7 @@
                     <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
                         <h2 class="wb-inv">Account menu</h2>
                         <ul class="app-list-account list-unstyled">
+                            <li><a href="#" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account settings</a></li>
                             <li><a href="../all/signedOut.html" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sign out</a></li>
                         </ul>
                     </nav>
@@ -99,8 +100,7 @@
                 </nav>
             </div>
         </div>
-        <!--<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="#" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>-->
-
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/default.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
@@ -131,7 +131,9 @@
                         <summary>Account details</summary>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>Make any changes to your account information, then press the <strong>Save changes</strong> button.</p>
+                                <p>The account information we have is based on your RCMP Business Web Services account. Should this information not be correct, please contact the <a href="#">Canadian Firearms Program</a> to update it.</p>
+                                <p>To update your language preferences, make the change and press the <strong>Save changes</strong> button.</p>
+
                             </div>
                         </div>
                         <div class="row">
@@ -144,52 +146,132 @@
                                         <fieldset>
                                             <legend class="wb-invisible"><span class="wb-invisible">Contact information</span></legend>
 
-                                            <div class="form-group">
-                                                <label for="email">Email address (username@example.com)<span class="wb-inv"> (required)</span>:</label>
-                                                <input name="email" type="email" id="email" value="jdoe@gmail.com" size="50" maxlength="150" class="form-control full-width" autocomplete="email" />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="phone">Telephone number<span class="wb-inv"> (required)</span>:</label>
-                                                <div class="form-group form-inline">
-                                                    <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="label-form">Business email address:</div>
+                                                    <div><a href="mailto:bergeron@gmail.com">nbergeron@gmail.com</a></div>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="firstName">First name<span class="wb-inv"> (required)</span>:</label>
-                                                <input name="firstName" type="text" id="firstName" value="John" size="35" maxlength="50" class="form-control" autocomplete="given-name" />
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="label-form">Business telephone number:</div>
+                                                    <div>613-277-1234, extension 393</div>
+                                                </div>
                                             </div>
+
                                             <div class="form-group">
-                                                <label for="lastName">Last name<span class="wb-inv"> (required)</span>:</label>
-                                                <input name="lastName" type="text" id="lastName" value="Doe" size="35" maxlength="50" class="form-control" autocomplete="family-name" />
+                                                <label for="language" class="label-form"><span class="mandatory" title="This field is required">*</span> Preferred language of communication<span class="wb-inv"> (required)</span>:</label>
+                                                <select class="form-control" id="language">
+                                                    <option value="English" selected>English</option>
+                                                    <option value="French">French</option>
+                                                </select>
                                             </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <button type="submit" class="btn btn-primary" id="btnSave">Save changes</button>
+                                                </div>
+                                            </div>
+
+
                                         </fieldset>
                                     </div>
                                 </section>
 
                             </div>
 
+                            <div class="col-md-6">
+                                <section class="panel panel-default panel-no-border">
+                                    <header class="panel-heading">
+                                        <h3 class="panel-title"> Business information </h3>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="label-form">Business name:</div>
+                                                <div>99999999 Canada Inc., operating as Acme Widget Company</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <div class="label-form">Mailing address:</div>
+                                                <address class="mrgn-bttm-0">
+                                                    123 Elm St. <br>
+                                                    Suite 201 <br>
+                                                    Ottawa, ON K1K 1K1
+                                                </address>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                            </div>
+
 
                         </div>
+
+                    </details>
+                    <details id="panel-related">
+                        <summary>Related accounts <span class="badge">2</span></summary>
+                        <h2 class="wb-inv">Related accounts</h2>
                         <div class="row">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary" id="btnSave">Save changes</button>
+
+                                <p>This individual has access to the following accounts:</p>
+
+
+                                <div class="row">
+                                    <div class="col-md-6 ">
+
+                                        <div class="panel panel-default panel-account hght-inhrt ">
+                                            <div class="panel-heading">
+
+                                                <h3 class="mrgn-tp-sm"><i class="fa fa-building opct-50 mrgn-rght-sm"></i><a href="#">Acme Widget company</a></h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <span class="label-upper">Address:</span><br>
+                                                    <address class="mrgn-bttm-0">
+                                                        9999 5th Avenue E <br>
+                                                        New York, NY 99999<br>
+                                                        United States
+                                                    </address>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Add a business account</button>
                             </div>
                         </div>
-                    </details>
-                    <details id="panel-services">
-                        <summary>Applications & services</summary>
-                        <h2 class="wb-inv">Applications & services</h2>
 
 
 
                     </details>
 
-                    <details id="panel-activityHistory">
-                        <summary>Activity history</summary>
-                        <h2 class="wb-inv">Activity history</h2>
+                    <details id="panel-payment">
+                        <summary>Payment preferences</summary>
+                        <h2 class="wb-inv">Payment preferences</h2>
+                        <div class="row">
+                            <div class="col-md-12">
+
+                            </div>
+
+                        </div>
+
 
 
                     </details>
+
+
+
 
                 </div>
             </div>
