@@ -114,11 +114,11 @@
 
                 <div class="form-group">
                     <label for="firstName" class=""><span class="mandatory" title="This field is required">*</span> First name<strong class="required" aria-hidden="true"> (required)</strong>:</label>
-                    <input name="firstName" id="firstName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50" required="required" data-rule-minlength="2" data-msg="Enter your first name.">
+                    <input name="firstName" id="firstName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50" required="required" data-rule-minlength="2" data-msg-required="Enter your first name.">
                 </div>
                 <div class="form-group">
                     <label for="lastName" class=""><span class="mandatory" title="This field is required">*</span> Last name<strong class="required" aria-hidden="true"> (required)</strong>:</label>
-                    <input name="lastName" id="lastName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="2" data-msg="Enter your last name.">
+                    <input name="lastName" id="lastName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="2" data-msg-required="Enter your last name.">
                 </div>
 
                 <div class="form-group">
@@ -126,15 +126,15 @@
                         <legend class="medium mrgn-bttm-0"><span class="mandatory" title="This field is required">*</span> Date of birth:<strong class="required" aria-hidden="true"> (required)</strong></legend>
                         <div class="display-inline-block">
                             <label for="dobMonth" class="small">Month <span class="wb-inv">Format: 2 digits</span></label>
-                            <input name="dobMonth" id="dobMonth" type="text" size="2" maxlength="2" min="1" max="12" placeholder="MM" autocomplete="bday-month" class="form-control input-numeric-2" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="" data-rule-minlength="2" data-msg-minlength="The month of birth entered must be 2 digits long." data-msg-required="Enter your month of birth" data-rule-rangelength="[1,12]" data-msg-minlength="The month of birth entered must be between 1 and 12." data-msg-maxlength="The month of birth entered must be between 1 and 12.">
+                            <input name="dobMonth" id="dobMonth" type="text" size="2" maxlength="2" placeholder="MM" autocomplete="bday-month" class="form-control input-numeric-2" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="The month of birth entered must be 2 digits long." data-rule-minlength="2" data-msg-minlength="The month of birth entered must be 2 digits long." data-msg-required="Enter your month of birth" data-rule-rangelength="[1,12]" data-msg-minlength="The month of birth entered must be between 1 and 12." data-msg-maxlength="The month of birth entered must be between 1 and 12." data-msg-rangelength="Test">
                         </div>
                         <div class="display-inline-block">
                             <label for="dobDay" class="small">Day <span class="wb-inv">Format: 2 digits</span></label>
-                            <input name="dobDay" id="dobDay" type="text" size="2" maxlength="2" min="1" max="31" placeholder="DD" autocomplete="bday-day" class="form-control input-numeric-2" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="" data-rule-minlength="2" data-msg-minlength="The day of birth entered must be 2 digits long." data-msg-required="Enter your day of birth" data-rule-rangelength="[1,31]" data-msg-rangelength="The day of birth entered must be between 1 and 31.">
+                            <input name="dobDay" id="dobDay" type="text" size="2" maxlength="2" placeholder="DD" autocomplete="bday-day" class="form-control input-numeric-2" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="The day of birth entered must be 2 digits long." data-rule-minlength="2" data-msg-minlength="The day of birth entered must be 2 digits long." data-msg-required="Enter your day of birth" data-rule-rangelength="[1,31]" data-msg-rangelength="The day of birth entered must be between 1 and 31.">
                         </div>
                         <div class="display-inline-block">
                             <label for="dobYear" class="small">Year <span class="wb-inv">Format: 4 digits</span></label>
-                            <input name="dobYear" id="dobYear" type="text" size="4" maxlength="4" placeholder="YYYY" autocomplete="bday-year" class="form-control input-numeric-4" required="required" pattern="[0-9]+" min="1900" max="2024" data-rule-digits=”true” data-msg-digits="" data-rule-minlength="4" data-msg-minlength="The year of birth entered must be 4 digits long." data-msg-maxlength="Enter at least 4 digits for the year of birth." data-msg-required="Enter your year of birth">
+                            <input name="dobYear" id="dobYear" type="text" size="4" maxlength="4" placeholder="YYYY" autocomplete="bday-year" class="form-control input-numeric-4" required="required" pattern="[0-9]+" min="1900" max="2024" data-rule-digits=”true” data-msg-digits="The year of birth entered must be 2 digits long." data-rule-minlength="4" data-msg-minlength="The year of birth entered must be 4 digits long." data-msg-maxlength="Enter at least 4 digits for the year of birth." data-msg-required="Enter your year of birth">
                         </div>
                     </fieldset>
                 </div>
