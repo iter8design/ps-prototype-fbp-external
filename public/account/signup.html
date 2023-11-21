@@ -106,9 +106,9 @@
     <main role="main" property="mainContentOfPage" class="container">
         <h1 property="name" id="wb-cont"><i class="fa-solid fa-user"></i> Sign-up for an account</h1>
         <div class="wb-frmvld">
-            <form action="signup-settingUp.html" method="post">
+            <form action="activateAccount.html" method="post">
                 <p>Welcome to Firearms Buyback Program! We'll need some basic information from you before we get started.</p>
-                <p>Enter the information that was provided by the Canadian Firearm Program when you registered for access to <a href="#" target="_blank" title="This link will open in a new window"><abbr title="Royal Canadian Mounted Police">RCMP</abbr>'s Business Web Services <span class="wb-inv">This link will open in a new window</span></a>. If you have never used Business Web Services before, please contact the office of the <a href="#" target="_blank" title="This link will open in a new window">Chief Firearms Officer <span class="wb-inv">This link will open in a new window</span></a>for your province or territory.</p>
+                <p>Enter the information that was provided to the Canadian Firearm Program when you registered to access <a href="#" target="_blank" title="This link will open in a new window"><abbr title="Royal Canadian Mounted Police">RCMP</abbr>'s Business Web Services <span class="wb-inv">This link will open in a new window</span></a>. If you have never used Business Web Services before, please contact the office of the <a href="#" target="_blank" title="This link will open in a new window">Chief Firearms Officer <span class="wb-inv">This link will open in a new window</span></a>for your province or territory.</p>
 
 
 
@@ -119,6 +119,11 @@
                 <div class="form-group">
                     <label for="lastName" class=""><span class="mandatory" title="This field is required">*</span> Last name<strong class="required" aria-hidden="true"> (required)</strong>:</label>
                     <input name="lastName" id="lastName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50" required="required" data-rule-minlength="2" data-msg-required="Enter your last name.">
+                </div>
+
+                <div class="form-group mrgn-tp-md">
+                    <label for="email"><span class="mandatory" title="This field is required">*</span> Email address (username@example.com)<strong class="required" aria-hidden="true"> (required)</strong><span class="fld-example">We'll use this email address to send you notifications and messages about your account.</span> </label>
+                    <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength>
                 </div>
 
                 <div class="form-group">
@@ -134,7 +139,7 @@
                         </div>
                         <div class="display-inline-block">
                             <label for="dobYear" class="small">Year <span class="wb-inv">Format: 4 digits</span></label>
-                            <input name="dobYear" id="dobYear" type="text" size="4" maxlength="4" placeholder="YYYY" autocomplete="bday-year" class="form-control input-numeric-4" required="required" pattern="[0-9]+" min="1900" max="2024" data-rule-digits=”true” data-msg-digits="The year of birth entered must be 2 digits long." data-rule-minlength="4" data-msg-minlength="The year of birth entered must be 4 digits long." data-msg-maxlength="Enter at least 4 digits for the year of birth." data-msg-required="Enter your year of birth">
+                            <input name="dobYear" id="dobYear" type="text" size="4" maxlength="4" placeholder="YYYY" autocomplete="bday-year" class="form-control input-numeric-4" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="The year of birth entered must be 2 digits long." data-rule-minlength="4" data-msg-minlength="The year of birth entered must be 4 digits long." data-msg-maxlength="Enter at least 4 digits for the year of birth." data-msg-required="Enter your year of birth">
                         </div>
                     </fieldset>
                 </div>
@@ -157,32 +162,25 @@
                 <div class="well">
                     <div class="checkbox checkbox-standalone gc-chckbxrdio">
                         <input id="agreement" type="checkbox" data-msg-required="Indicate your acceptance of the terms before continuing." />
-                        <label for="agreement"><span class="mandatory" title="This field is required">*</span> I agree to and understand <strong class="required" aria-hidden="true">(required)</strong>:
+                        <label for="agreement" aria-describedby="termsReferences"><span class="mandatory" title="This field is required">*</span> I agree to and understand <strong class="required" aria-hidden="true">(required)</strong>:</label>
 
-                            <ul>
-                                <li><a href="#dlg_privacy" class="wb-lbx">the terms of the privacy notice</a></li>
-                                <li><a href="#dlg_consent" class="wb-lbx">the consent and disclosure terms</a></li>
-                                <li><a href="#dlg_responsibilities" class="wb-lbx">my responsibilities as a firearm owner</a></li>
-                                <li><a href="#dlg_contact" class="wb-lbx">that my data will be shared with the contact center for support purposes</a></li>
-                            </ul>
-                        </label>
+                        <ul id="termsReferences" class="mrgn-lft-lg">
+                            <li><a href="#dlg_privacy" class="wb-lbx">the terms of the privacy notice</a></li>
+                            <li><a href="#dlg_consent" class="wb-lbx">the consent and disclosure terms</a></li>
+                            <li><a href="#dlg_responsibilities" class="wb-lbx">my responsibilities as a firearm owner</a></li>
+                            <li><a href="#dlg_contact" class="wb-lbx">that my data will be shared with the contact center for support purposes</a></li>
+                        </ul>
+
                     </div>
                 </div>
 
                 <div class="nav-button">
-                    <button type="submit" class="btn btn-primary" id="btnSignup">Sign-up for an account</button>
+                    <button type="submit" class="btn btn-primary" id="btnSignup">Continue</button>
 
                 </div>
             </form>
 
-            <div id="cn-spin-wrapper" role="status" style="display:none">
-                <div id="spin-wrapper">
-                    <div id="spinner">
-                        <i class="fa-brands fa-canadian-maple-leaf fa-5x fa-fade fa-fw" style="--fa-animation-duration: 2.5s; --fa-fade-opacity: 0.2;"></i>
-                        <p>Please wait...</p>
-                    </div>
-                </div>
-            </div>
+
 
             <section id="dlg_privacy" class="mfp-hide modal-dialog modal-content overlay-def">
                 <header class="modal-header">
@@ -252,7 +250,7 @@
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2022-03-31
+                            <!-- #BeginDate format:IS1 -->2023-11-20
                             <!-- #EndDate -->
                         </time>
                         <span class="version">(V9.9.9)</span>
