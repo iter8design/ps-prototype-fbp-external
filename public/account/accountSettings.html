@@ -120,7 +120,7 @@
         <!-- InstanceBeginEditable name="Content" -->
 
         <h1 property="name" id="wb-cont">
-            <span class="hd-pre">{First name} - {Last name}</span>
+            <span class="hd-pre">{First name} - {Last name}: {Operating name} ({Legal name})</span>
             <span class="hd-icon"><i class="fa-solid fa-cog"></i></span>
             <span class="hd-title">Account settings</span>
         </h1>
@@ -145,19 +145,11 @@
                                     <div class="panel-body">
                                         <fieldset>
                                             <legend class="wb-invisible"><span class="wb-invisible">Contact information</span></legend>
+                                            <div class="form-group">
+                                                <label for="email"><span class="mandatory" title="This field is mandatory">*</span>Business email address (username@example.com) <strong class="required">(required)</strong>:</label>
+                                                <input name="email" type="email" id="email" value="nbergeron@gmail.com" size="50" maxlength="150" class="form-control full-width" autocomplete="email" />
+                                            </div>
 
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="label-form">Business email address:</div>
-                                                    <div><a href="mailto:bergeron@gmail.com">nbergeron@gmail.com</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="label-form">Business telephone number:</div>
-                                                    <div>613-277-1234, extension 393</div>
-                                                </div>
-                                            </div>
 
                                             <div class="form-group">
                                                 <label for="language" class="label-form"><span class="mandatory" title="This field is required">*</span> Preferred language of communication<span class="wb-inv"> (required)</span>:</label>
@@ -286,7 +278,7 @@
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2022-03-31
+                            <!-- #BeginDate format:IS1 -->2023-11-20
                             <!-- #EndDate -->
                         </time>
                         <span class="version">(V9.9.9)</span>
