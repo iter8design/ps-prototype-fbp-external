@@ -104,9 +104,9 @@
 
     </header>
     <main role="main" property="mainContentOfPage" class="container">
-        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user"></i> Sign-up for an account</h1>
+        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user"></i> Sign up for an account</h1>
         <div class="wb-frmvld">
-            <form action="activateAccount.html" method="post">
+            <form action="activateAccount.html" method="get">
                 <p>Welcome to Firearms Buyback Program! We'll need some basic information from you before we get started.</p>
                 <p>Enter the information that was provided to the Canadian Firearm Program when you registered to access <a href="#" target="_blank" title="This link will open in a new window"><abbr title="Royal Canadian Mounted Police">RCMP</abbr>'s Business Web Services <span class="wb-inv">This link will open in a new window</span></a>. If you have never used Business Web Services before, please contact the office of the <a href="#" target="_blank" title="This link will open in a new window">Chief Firearms Officer <span class="wb-inv">This link will open in a new window</span></a>for your province or territory.</p>
 
@@ -123,7 +123,7 @@
 
                 <div class="form-group mrgn-tp-md">
                     <label for="email"><span class="mandatory" title="This field is required">*</span> Email address (username@example.com)<strong class="required" aria-hidden="true"> (required)</strong><span class="fld-example">We'll use this email address to send you notifications and messages about your account.</span> </label>
-                    <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength>
+                    <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" required="required" data-rule-minlength="The email address entered must be at least 2 characters." data-msg-required="Enter your email address.">
                 </div>
 
                 <div class="form-group">
@@ -175,7 +175,8 @@
                 </div>
 
                 <div class="nav-button">
-                    <button type="submit" class="btn btn-primary" id="btnSignup">Continue</button>
+                   <button type="submit" class="btn btn-primary">Sign up for an account</button>
+                    <a class="btn btn-default mrgn-lft-lg" href="recoverAccount.html">I already have an account</a>
 
                 </div>
             </form>

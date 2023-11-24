@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Activate your account - Firearms Buyback Program</title>
+    <title>Firearms Buyback Program</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -27,15 +27,15 @@
     <link rel="stylesheet" href="../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<link href="../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
-		<link rel="stylesheet" href="../../GCWeb/css/ie8-theme.min.css" />
-		<script src="../../js/jquery/1.11.1/jquery.min.js"></script>
-		<script src="../../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
@@ -52,6 +52,19 @@
         <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
     </ul>
     <header role="banner">
+       <div class="alert-floating alert alert-warning alert-dismissible fade in" role="alert" id="dlg-maintenance-warning" data-maintenance-date="2023-11-23 20:00">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" id="btnDismissWarning">×</span></button>
+            <div class="container">
+
+                <h2>Upcoming maintenance...</h2>
+
+
+                <p>Some of our services will be uavailable from <strong>2 a.m. <abbr title="Eastern Time">ET</abbr> Monday, July 8</strong> until <strong>6 a.m. <abbr title="Eastern Time">ET</abbr> Monday, July 8</strong> due to scheduled maintenance. We apologize for the inconvenience. </p>
+
+
+
+            </div>
+        </div>
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
@@ -76,12 +89,7 @@
                             Firearms Buyback Program</a>
                     </section>
 
-                    <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
-                        <h2 class="wb-inv">Account menu</h2>
-                        <ul class="app-list-account list-unstyled">
-                            <li><a href="../all/signedOut.html" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sign out</a></li>
-                        </ul>
-                    </nav>
+                   
                 </div>
             </div>
         </div>
@@ -102,39 +110,79 @@
         <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/signup.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
+        <!--<nav role="navigation" id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li>Home</li>
+
+
+                    </ol>
+                </div>
+            </div>
+        </nav>-->
     </header>
     <main role="main" property="mainContentOfPage" class="container">
-        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user"></i> Activate your account</h1>
-        <div class="alert alert-success mrgn-bttm-md">
-            <h2>Code resent</h2>
-            <ol class="fa-ul">
-                <li>Your confirmation code has been resent.</li>
-            </ol>
+        <!-- InstanceBeginEditable name="Content" -->
+        
+        <h1 property="name" id="wb-cont">
+            <span class="hd-title"><i class="fa-solid fa-right-to-bracket"></i> Sign-in</span>
+        </h1>
+
+        <p>The Firearms Buyback Program portal is a secure online portal where you can:</p>
+        <ul>
+            <li>submit a firearm compensation claim</li>
+            <li>manage your firearm shipments and disposal options</li>
+            <li>get updates on the status of your claim</li>
+        </ul>
+
+
+       <p> Choose one of the following options:</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <section class="panel panel-default">
+                    <header class="panel-heading">
+                        <h2>Sign in or register with GCKey</h2>
+                    </header>
+                    <div class="panel-body">
+
+                        <p>GCKey gives you secure access to Government of Canada online services from different departments.</p>
+                        <p>If you don't already have one, you may register for one.</p>
+                    </div>
+                    <footer class="panel-footer">
+                        <a href="account/gcKey-welcome.html" class="btn btn-primary">Continue to GCKey</a>
+                    </footer>
+                </section>
+                <!--<p>Having difficulties with your GCKey account? Have a look at our <a href="#">frequently asked questions</a>.</p>-->
+
+            </div>
+            <div class="col-md-6">
+                <section class="panel panel-default">
+                    <header class="panel-heading">
+                        <h2>Sign in with a secure online banking partner</h2>
+                    </header>
+                    <div class="panel-body">
+                        <p>This options allows you to use the same sign-in information you already use for online banking.</p>
+                        <p>None of your financial or banking information will be shared with Public Safety. Your sign-in partners will not know which government service you are using</p>
+                        <p>You will temporarily leave the Public Safety web site to visit your online banking site.</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <details>
+                                    <summary>List of Sign-In Partners</summary>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="panel-footer">
+                        <a href="#" class="btn btn-primary">Continue to Sign-in Partner</a>
+                    </footer>
+                </section>
+            </div>
+
+
         </div>
-
-        <form action="#" method="get">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>We've sent an email to:</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="xlarge"><strong>youremail@domain.com</strong></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p>We'll use this email address to send you notifications and messages about your account. </p>
-                    <p>Please check your email and use the link provided to activate your account. If you don't get a confirmation email within a few minutes, check your spam folder. </p>
-                </div>
-            </div>
-
-            <div class="nav-button">
-                <a href="../welcome-accountActivated.html" class="btn btn-primary" type="submit">Resend activation email</a>
-                <a href="signup.html" class="btn btn-link mrgn-lft-md">Go back</a>
-            </div>
-        </form>
 
         <div class="row">
             <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
@@ -151,7 +199,8 @@
 
             </div>
             <div class="col-xs-12 col-md-6 mrgn-tp-lg">
-
+                <div id="cn-accnt">Public Safety Canada account number <div class="account-number">PS9999999999</div>
+                </div>
             </div>
         </div>
     </main>
@@ -163,9 +212,9 @@
                     <nav class="col-md-10 ftr-urlt-lnk">
                         <h2 class="wb-inv">About this Web application</h2>
                         <ul>
-                            <li><a href="../all/contactUs.html">Contact information</a></li>
-                            <li><a href="../all/termsConditions.html">Terms and conditions</a></li>
-                            <li><a href="../all/privacy.html">Privacy</a></li>
+                            <li><a href="all/contactUs.html">Contact information</a></li>
+                            <li><a href="all/termsConditions.html">Terms and conditions</a></li>
+                            <li><a href="all/privacy.html">Privacy</a></li>
                         </ul>
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
@@ -178,57 +227,29 @@
         </div>
     </footer>
 
-    <span class="wb-sessto" data-wb-sessto='{"logouturl": "#"}'></span>
-
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../js/ps/bootstrap/tooltip.js"></script>
+    <script src="../js/ps/bootstrap/alert.js"></script>
+    <script src="../js/ps/bootstrap/popover.js"></script>
+    
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
-    <script src="../../js/ps/cleave/cleave.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-            /*$("#btnSignup").on("click", function(event) {
-                event.preventDefault();
-                $("#cn-spin-wrapper").show().focus();
-            });*/
 
-            new Cleave('.input-numeric-4', {
-                blocks: [4],
-                numericOnly: true
-            });
 
-            new Cleave('.input-numeric-8', {
-                blocks: [8],
-                numericOnly: true
-            });
-
-            $('.input-numeric-2').toArray().forEach(function(field) {
-                new Cleave(field, {
-                    blocks: [2],
-                    numericOnly: true
-                });
-            });
-
-            $(".wb-frmvld").one("timerpoke.wb", function(event) {
-                wb.i18nDict["frm-nosubmit"] = "Attention <span class='wb-inv'>: Please correct ";
-                wb.i18nDict["errs-fnd"] = " errors on this page. </span>";
-                wb.i18nDict["err-fnd"] = "error on this page. </span>";
-                wb.i18nDict["err-correct"] = "";
-            });
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

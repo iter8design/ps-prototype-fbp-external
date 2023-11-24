@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Activate your account - Firearms Buyback Program</title>
+    <title>Account activated - Firearms Buyback Program</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -79,6 +79,7 @@
                     <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
                         <h2 class="wb-inv">Account menu</h2>
                         <ul class="app-list-account list-unstyled">
+                            <li><a href="#" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account settings</a></li>
                             <li><a href="../all/signedOut.html" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sign out</a></li>
                         </ul>
                     </nav>
@@ -99,42 +100,23 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/signup.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
-
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../includes/menus/activationInProgress.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
     </header>
     <main role="main" property="mainContentOfPage" class="container">
-        <h1 property="name" id="wb-cont"><i class="fa-solid fa-user"></i> Activate your account</h1>
-        <div class="alert alert-success mrgn-bttm-md">
-            <h2>Code resent</h2>
-            <ol class="fa-ul">
-                <li>Your confirmation code has been resent.</li>
-            </ol>
-        </div>
+        <h1 property="name" id="wb-cont">
+            <span class="hd-pre">{First name} - {Last name}: {Operating name} ({Legal name})</span>
+            <span class="hd-icon"><i class="fa-solid fa-door-open"></i></span>
+            <span class="hd-title">Welcome</span>
+        </h1>
+        <section class="alert alert-success mrgn-bttm-md" aria->
+            <h2>Account activated</h2>
+            <p>Your account has been successfully activated.</p>
+        </section>
 
-        <form action="#" method="get">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>We've sent an email to:</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="xlarge"><strong>youremail@domain.com</strong></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p>We'll use this email address to send you notifications and messages about your account. </p>
-                    <p>Please check your email and use the link provided to activate your account. If you don't get a confirmation email within a few minutes, check your spam folder. </p>
-                </div>
-            </div>
 
-            <div class="nav-button">
-                <a href="../welcome-accountActivated.html" class="btn btn-primary" type="submit">Resend activation email</a>
-                <a href="signup.html" class="btn btn-link mrgn-lft-md">Go back</a>
-            </div>
-        </form>
+        <p>We're getting a list of your registered firearms with the <em>Canadian Firearms Program</em> to make your claim process easier. </p>
+        <p>This can take <strong>up to 24 hours</strong> and we'll send you an email as soon as your account is ready.</p>
 
         <div class="row">
             <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
@@ -151,7 +133,8 @@
 
             </div>
             <div class="col-xs-12 col-md-6 mrgn-tp-lg">
-
+                <div id="cn-accnt">Public Safety Canada account number <div class="account-number">PS9999999999</div>
+                </div>
             </div>
         </div>
     </main>
@@ -178,57 +161,25 @@
         </div>
     </footer>
 
-    <span class="wb-sessto" data-wb-sessto='{"logouturl": "#"}'></span>
-
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../js/ps/bootstrap/alert.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
-    <script src="../../js/ps/cleave/cleave.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-            /*$("#btnSignup").on("click", function(event) {
-                event.preventDefault();
-                $("#cn-spin-wrapper").show().focus();
-            });*/
 
-            new Cleave('.input-numeric-4', {
-                blocks: [4],
-                numericOnly: true
-            });
-
-            new Cleave('.input-numeric-8', {
-                blocks: [8],
-                numericOnly: true
-            });
-
-            $('.input-numeric-2').toArray().forEach(function(field) {
-                new Cleave(field, {
-                    blocks: [2],
-                    numericOnly: true
-                });
-            });
-
-            $(".wb-frmvld").one("timerpoke.wb", function(event) {
-                wb.i18nDict["frm-nosubmit"] = "Attention <span class='wb-inv'>: Please correct ";
-                wb.i18nDict["errs-fnd"] = " errors on this page. </span>";
-                wb.i18nDict["err-fnd"] = "error on this page. </span>";
-                wb.i18nDict["err-correct"] = "";
-            });
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

@@ -105,6 +105,25 @@ thead tr {
     display: none;
 }
 
+.alert-warning.alert-floating > * {
+    margin-left: auto;
+}
+
+.alert-floating.alert-warning h2:before {
+    font-family: "Glyphicons Halflings";
+    padding-right: 5px;
+    color: #f90;
+    content: "\e107";
+}
+
+.alert-warning::before {
+    content: none;
+}
+
+.alert-dismissible .close {
+    right: 15px;
+}
+
 .alert {
     margin-left: 0;
     padding-right: 15px;
@@ -401,6 +420,7 @@ textarea.fieldError,
     cursor: pointer;
 }
 
+
 .panel-primary > .panel-heading {
     background-color: #335075;
     border-color: #335075;
@@ -417,6 +437,11 @@ textarea.fieldError,
 
 .panel-primary {
     border-color: #335075;
+}
+
+.panel-heading h2 {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 .panel-min-height {
