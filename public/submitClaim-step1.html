@@ -100,7 +100,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/default.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -109,7 +109,7 @@
                 <div class="row">
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
-                        <li>Submit a firearms compensation claim: Step 1 of 4</li>
+                        <li>Submit a firearm compensation claim: Step 1 of 4</li>
 
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <!-- InstanceEndEditable -->
@@ -120,7 +120,170 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><span class="hd-pre">Submit a firearms compensation claim:</span> Step 1 of 4</h1>
+        <h1 property="name" id="wb-cont"><span class="hd-pre">Submit a firearm compensation claim:</span> Step 1 of 4</h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <div class="wizard">
+                        <div class="wizard-inner">
+                            <div class="completion-line"></div>
+                            <nav>
+                                <ul class="nav nav-tabs">
+
+                                    <li role="presentation" class="in-progress" title="Step 1 - Registered firearms - In progress">
+                                        <a href="#">
+                                            <span class="round-tab">
+                                                <span class="wb-inv">Step</span><span class="step-label">1</span> <span class="wb-inv">Applicant - In progress</span>
+                                            </span>
+                                        </a>
+                                        <div>
+                                            <div class="step-label-bottom">Registered firearms</div>
+                                        </div>
+                                    </li>
+
+                                    <li role="presentation" class="" title="Step 2 - Unregistered firearms< - Incomplete">
+                                        <a href="#">
+                                            <span class="round-tab">
+                                                <span class="wb-inv">Step</span><span class="step-label">2</span> <span class="wb-inv">Equipment - Incomplete</span>
+                                            </span>
+                                        </a>
+                                        <div>
+                                            <div class="step-label-bottom">Unregistered firearms</div>
+                                        </div>
+                                    </li>
+
+                                    <li role="presentation" class="" title="Step 3 - Payment - Incomplete">
+                                        <a href="#">
+                                            <span class="round-tab">
+                                                <span class="wb-inv">Step</span><span class="step-label">3</span> <span class="wb-inv">Review - Incomplete</span>
+                                            </span>
+                                        </a>
+                                        <div>
+                                            <div class="step-label-bottom">Payment</div>
+                                        </div>
+                                    </li>
+
+
+                                    <li role="presentation" class="incomplete--no-nav" title="Step 4 - Summary - Incomplete">
+                                        <div>
+                                            <span class="round-tab">
+                                                <span class="wb-inv">Step</span><span class="step-label">4</span> <span class="wb-inv">Payment - Incomplete</span>
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <div class="step-label-bottom">Summary</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <form name="summary" method="get" action="submitClaim-step2.html">
+
+            <h2>Registered firearms</h2>
+            <p>These are your registered firearms with the <em>Canadian Firearms Program</em> that are eligible for compensation.</p>
+
+            <p>Verify that you have each firearm and indicate the method of disposal. If you do not have any of the firearms listed, remove them from this claim and contact the <em>Canadian Firearms Program</em>.</p>
+
+            <section class="panel panel-default panel-datatable">
+                <header class="panel-heading pddng-tp-0">
+                    <div class="row">
+                        <div class="col-md-6"> </div>
+                        <div class="col-md-6 text-right text-left-sm text-left-xs">
+                            <div class="form-inline">
+                                <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
+                                    <div class="tableFilter"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="table-responsive">
+                    <table id="tbl-registered" class="wb-tables table table-hover" data-wb-tables='
+        {"info" : false, "filter" : true, "order" : [[2,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0, 4, 5]}],
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="width5 text-center selectAll"></th>
+                                <th scope="col" class="width15 text-nowrap">Firearm reference <br> number (FRN)</th>
+                                <th scope="col">Make/model</th>
+                                <th scope="col" class="width20">Serial #</th>
+                                <th scope="col" class="width20">Method of disposal <i class="fa-solid fa-circle-info"></i>
+                                </th>
+                                <th scope="col" class="width20 text-right">Estimated <br> compensation
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center"><input name="ua1" type="checkbox" value="" id="ua1"></td>
+                                <td><label for="ua1"><a href="#">144785-25</a></label></td>
+                                <td>ADC 8833</td>
+                                <td>9938773873</td>
+                                <td>Turn in</td>
+                                <td class="text-right">$200.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><input name="ua2" type="checkbox" value="" id="ua2"></td>
+                                <td><label for="ua2"><a href="#">13785-01</a></label></td>
+                                <td>ADC ADC234</td>
+                                <td>999888333333</td>
+                                <td>Turn in</td>
+                                <td class="text-right">$400.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><input name="ua3" type="checkbox" value="" id="ua3"></td>
+                                <td><label for="ua3"><a href="#">8888899</a></label></td>
+                                <td>Adler B210</td>
+                                <td>111988222</td>
+                                <td>Turn in</td>
+                                <td class="text-right">$1,000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><input name="ua3" type="checkbox" value="" id="ua3"></td>
+                                <td><label for="ua3"><a href="#">488874-23</a></label></td>
+                                <td>Adler B210</td>
+                                <td>4988829383</td>
+                                <td>Turn in</td>
+                                <td class="text-right">$900.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <footer class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-6 pddng-tp-sm">
+                            <button class="btn btn-primary mrgn-tp-md" type="submit">Set method of disposal</button> <button class="btn btn-default mrgn-tp-md mrgn-lft-md" type="submit">Remove</button>
+                        </div>
+                        <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
+                        <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
+                    </div>
+                </footer>
+
+
+            </section>
+
+            <div class="well">
+                <h3 class="wb-inv">Total estimated compensation</h3>
+                <p>Your total estimated compensation is:</p>
+                <p class="h1">$34,000.00</p>
+            </div>
+
+
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Continue</button>
+                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
+            </div>
+        </form>
+
+
         <a id="helpBtn" class="btn btn-lg btn-primary wb-lbx" href="#dlg_help">
             <i class="fas fa-question-circle"></i>
             <span>Help</span>
@@ -166,119 +329,28 @@
                 </footer>
             </div>
         </section>
-        <form method="get" action="submitClaim-step2.html">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <section>
-                        <div class="wizard">
-                            <div class="wizard-inner">
-                                <div class="completion-line"></div>
-                                <nav>
-                                    <ul class="nav nav-tabs">
-
-                                        <li role="presentation" class="in-progress" title="Step 1 - Applicant - In progress">
-                                            <a href="#">
-                                                <span class="round-tab">
-                                                    <span class="wb-inv">Step</span><span class="step-label">1</span> <span class="wb-inv">Applicant - In progress</span>
-                                                </span>
-                                            </a>
-                                            <div>
-                                                <div class="step-label-bottom">Applicant</div>
-                                            </div>
-                                        </li>
-
-                                        <li role="presentation" class="" title="Step 2 - Equipment - Incomplete">
-                                            <a href="submitRequest-step2-withIncompleteStep.html">
-                                                <span class="round-tab">
-                                                    <span class="wb-inv">Step</span><span class="step-label">2</span> <span class="wb-inv">Equipment - Incomplete</span>
-                                                </span>
-                                            </a>
-                                            <div>
-                                                <div class="step-label-bottom">Equipment</div>
-                                            </div>
-                                        </li>
-
-                                        <li role="presentation" class="" title="Step 3 - Review - Incomplete">
-                                            <a href="#">
-                                                <span class="round-tab">
-                                                    <span class="wb-inv">Step</span><span class="step-label">3</span> <span class="wb-inv">Review - Incomplete</span>
-                                                </span>
-                                            </a>
-                                            <div>
-                                                <div class="step-label-bottom">Review</div>
-                                            </div>
-                                        </li>
 
 
-                                        <li role="presentation" class="incomplete--no-nav" title="Step 4 - Payment - Incomplete">
-                                            <div>
-                                                <span class="round-tab">
-                                                    <span class="wb-inv">Step</span><span class="step-label">4</span> <span class="wb-inv">Payment - Incomplete</span>
-                                                </span>
-                                            </div>
 
-                                            <div>
-                                                <div class="step-label-bottom">Payment</div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+        <div class="row">
+            <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2023-12-01
+                            <!-- #EndDate -->
+                        </time>
+                        <span class="version">(V9.9.9)</span>
+                    </dd>
+                </dl>
 
             </div>
-
-            <form name="summary" method="get" action="requestSubmitted.html">
-
-                <h2>Applicant</h2>
-                <p>Tell us about yourself and how we can reach you for this request.</p>
-
-
-                <div class="well">
-
-
-
-
-                    <p class="mrgn-tp-lg mrgn-bttm-lg">{Form content goes here.}</p>
-
-
-
-                </div>
-
-
-
-                <div class="nav-button">
-                    <button class="btn btn-primary" type="submit">Continue</button>
-                    <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
-                </div>
-            </form>
-
-
-
-
-
-            <div class="row">
-                <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
-                    <dl id="wb-dtmd">
-                        <dt>Date modified:&#32;</dt>
-                        <dd>
-                            <time property="dateModified">
-                                <!-- #BeginDate format:IS1 -->2022-04-19
-                                <!-- #EndDate -->
-                            </time>
-                            <span class="version">(V9.9.9)</span>
-                        </dd>
-                    </dl>
-
-                </div>
-                <div class="col-xs-12 col-md-6 mrgn-tp-lg">
-                    <div id="cn-accnt">Public Safety Canada account number <div class="account-number">PS9999999999</div>
-                    </div>
+            <div class="col-xs-12 col-md-6 mrgn-tp-lg">
+                <div id="cn-accnt"><abbr title="Canadian Firearms Program">CFP</abbr> Business Licence Number <div class="account-number">99999999</div>
                 </div>
             </div>
+        </div>
     </main>
     <footer role="contentinfo" id="wb-info">
         <div id="transactFooter" class="landscape"></div>
@@ -317,12 +389,81 @@
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
+            /* Datatable */
+            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
+            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
+            $('.bottom, .top').addClass('dataTables_wrapper');
+            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
+            $(".first.paginate_button, .last.paginate_button").hide();
+            $(".dataTables_filter input").addClass("form-control").css({
+                "margin-bottom": "0px"
+            });;
+            $(".dataTables_filter label").css({
+                "margin-bottom": "0px"
+            });
 
+            //Add the select all checkbox
+            var selectAllStr = 'Select all';
+            $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-inv'>" + selectAllStr + "</label>");
+            $("#selectAll").click(function() {
+                if ($(this).prop("checked")) {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", true);
+                        fnHighlightSelectedRow($(this));
+                    });
+                } else {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+                }
+
+            });
+
+            //Bind the click event handler to the checkboxes
+            $("#tbl-registered tbody").on('click', "td>:checkbox", function() {
+                fnHighlightSelectedRow($(this));
+            });
+
+            var oTable = $("#tbl-registered").dataTable({
+                "retrieve": true
+
+            }).api();
+
+            /* Any checkboxes hidden by filtering are re-added as hidden inputs */
+            $('form').on('submit', function(e) {
+                var rows = oTable.fnGetNodes(),
+                    inputs = [];
+                // Add the inputs which are not currently visible to the form
+                for (var i = 0, len = rows.length; i < len; i++) {
+                    var $fields = $(rows[i]).find('input[name]:hidden:checked');
+                    $fields.each(function(idx, el) {
+                        inputs.push('<input type="hidden" name="' + $(el).attr('name') + '" value="' + $(el).val() + '">');
+                    });
+                }
+                $(this).append(inputs.join(''));
+            });
+
+            /* Highlight the row that was checked */
+            function fnHighlightSelectedRow(checkbox) {
+                if (checkbox.prop("checked"))
+                    checkbox.parent("td").addClass("highlight-yellow").nextAll("td").addClass("highlight-yellow");
+                else
+                    checkbox.parent("td").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
+            }
         });
 
+        $(document).on("page.dt", ".wb-tables", function(event) {
+            //Deselect the select all checkbox on paginate
+            $("#selectAll").prop("checked", false);
+        });
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

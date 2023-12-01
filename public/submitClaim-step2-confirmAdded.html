@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Request submitted - Firearms Buyback Program</title>
+    <title>Submit a firearms compensation claim: Step 2 of 4 - Firearms Buyback Program</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -25,8 +25,7 @@
     <link rel="stylesheet" href="../css/fbp.css">
     <link rel="stylesheet" href="../css/utils.css">
     <link rel="stylesheet" href="../css/plugins.css">
-    <link rel="stylesheet" href="../js/ps/bootstrap-star-rating/css/star-rating.css">
-    <link rel="stylesheet" href="../js/ps/bootstrap-star-rating/themes/krajee-fas/theme.css">
+    <link rel="stylesheet" href="../css/wizard.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -101,7 +100,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/default.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -110,8 +109,8 @@
                 <div class="row">
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Submit a firearms compensation claim</a></li>
-                        <li>Claim submitted</li>
+                        <li>Submit a firearms compensation claim: Step 2 of 4</li>
+
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -121,58 +120,103 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><span class="hd-pre">Submit a firearms compensation claim:</span> <i class="fa-duotone fa-clipboard-check"></i> Request submitted</h1>
-
-
-        <section class="alert alert-success" role="status">
-            <p>Your claim reference number is <strong>999999</strong>. </p>
-            <p>We've sent you an email confirmation with your request information. </p>
+        <h1 property="name" id="wb-cont"><span class="hd-pre">Submit a firearms compensation claim:</span> Step 2 of 4</h1>
+        <section class="alert alert-success mrgn-bttm-md">
+            <h2>Success</h2>
+            <p>Your list of unregistered firearms was added to the claim. We did not include the following <strong>3</strong> firearms as they are not eligible for compensation:</p>
+            <ul>
+                <li>FRN {FRN Number}</li>
+                <li>FRN {FRN Number}</li>
+                <li>FRN {FRN Number}</li>
+            </ul>
         </section>
+        <form method="get" action="submitRequest-review.html">
 
-        <h2>What happens next</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <section>
+                        <div class="wizard">
+                            <div class="wizard-inner">
+                                <div class="completion-line"></div>
+                                <nav>
+                                    <ul class="nav nav-tabs">
 
-        <p>We will contact you within the next 3-5 business days to arrange shipping for the firearms indicated on the claim to a designated site. </p>
-        <p>Once the firearms are received and verified, your claim will be finalized and payment will be issued.</p>
+                                        <li role="presentation" class="complete" title="Step 1 - Applicant - Complete">
+                                            <a href="#">
+                                                <span class="round-tab">
+                                                    <span class="wb-inv">Step</span><span class="step-label">1</span> <span class="wb-inv">Registered firearms - Complete</span>
+                                                </span>
+                                            </a>
+                                            <div>
+                                                <div class="step-label-bottom">Registered firearms</div>
+                                            </div>
+                                        </li>
 
-        <div class="panel panel-feedback">
-            <header class="panel-heading">
-                <h2 class="mrgn-bttm-0">Tell us about your online experience</h2>
-            </header>
-            <div class="panel-body">
-                <div class="row ">
-                    <div class="col-md-1 col-sm-2 hidden-xs"><img src="../img/feedback.svg" alt=" "></div>
-                    <div class="col-md-11 col-sm-10 ">
-                        <div id="cnt-feedback">
-                            <p>We would love to hear your feedback on using this service.</p>
+                                        <li role="presentation" class="in-progress" title="Step 2 - Equipment - In progress">
+                                            <a href="#">
+                                                <span class="round-tab">
+                                                    <span class="wb-inv">Step</span><span class="step-label">2</span> <span class="wb-inv">Unregistered firearms - In progress</span>
+                                                </span>
+                                            </a>
+                                            <div>
+                                                <div class="step-label-bottom">Unregistered firearms</div>
+                                            </div>
+                                        </li>
 
-                            <div class="form-group">
-                                <label for="rating" class="control-label">Rate your experience</label>
-                                <input id="rating" name="rating" data-min="0" data-max="5" data-step="1" data-size="lg" data-theme="krajee-fas" required>
+                                        <li role="presentation" class="" title="Step 3 - Review - Incomplete">
+                                            <a href="#">
+                                                <span class="round-tab">
+                                                    <span class="wb-inv">Step</span><span class="step-label">3</span> <span class="wb-inv">Payment - Incomplete</span>
+                                                </span>
+                                            </a>
+                                            <div>
+                                                <div class="step-label-bottom">Payment</div>
+                                            </div>
+                                        </li>
+
+
+                                        <li role="presentation" class="incomplete--no-nav" title="Step 4 - Payment - Incomplete">
+                                            <div>
+                                                <span class="round-tab">
+                                                    <span class="wb-inv">Step</span><span class="step-label">4</span> <span class="wb-inv">Summary - Incomplete</span>
+                                                </span>
+                                            </div>
+
+                                            <div>
+                                                <div class="step-label-bottom">Summary</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
-                            <div class="form-group">
-                                <label for="rating-comments">Please provide more details.
-                                    <span class="fld-example">You will not receive a reply. Do not include any personal information such as telephone numbers or email addresses.</span>
-                                </label>
-                                <textarea name="rating-cxomments" id="rating-comments" cols="40" rows="3" class="form-control full-width" aria-describedby="rating-comments-character-count" data-maxlength="300"></textarea>
-                                <div id="rating-comments-character-count" aria-live="polite" class="mytc-character-count__messages">
-                                    <i class='fas fa-info-circle text-blue mrgn-rght-sm'></i> You have 300 characters remaining.
-
-                                </div>
-
-                            </div>
-
-                            <p><a href="#" class="btn btn-primary" id="btnSubmitFeedback">Submit feedback</a></p>
                         </div>
-                        <div id="cnt-feedback-confirm" style="display:none" role="status">
-                            <p><span class="label label-success">Thank you for submitting your feedback and helping to improve our services!</span></p>
-
-                        </div>
-                    </div>
+                    </section>
                 </div>
+
             </div>
-        </div>
-        <hr />
-        <p><a href="#"><i class="fa-solid fa-reply mrgn-rght-sm"></i>Return to Submit a firearms compensation claim</a></p>
+
+            <h2>Unregistered firearms</h2>
+
+
+
+
+
+            <div class="well">
+                <h3 class="wb-inv">Total estimated compensation for unregistered firearms</h3>
+                <p>Your total estimated compensation for un registered firearms is:</p>
+                <p class="h3">$0.00</p>
+                <p>Your total estimated compensation for all firearms is:</p>
+                <p class="h1">$34,000.00</p>
+            </div>
+
+
+
+
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Continue</button>
+                <a href="submitRequest-step1.html" class="btn btn-link mrgn-lft-md">Go back</a>
+            </div>
+        </form>
 
 
 
@@ -223,10 +267,7 @@
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../js/jquery/2.2.4/jquery.js"></script>
     <script src="../wet-boew/js/wet-boew.min.js"></script>
-    <script src="../js/ps/bootstrap-star-rating/js/star-rating.js"></script>
-    <script src="../js/ps/bootstrap-star-rating/themes/krajee-fas/theme.js"></script>
-    <script src="../js/ps/bootstrap-star-rating/js/locales/LANG.js"></script>
-    "></script>
+
     <!--<![endif]
         -->
     <!--[if lt IE 9]>
@@ -239,54 +280,6 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-            $("#rating").rating({
-                showClear: false,
-                defaultCaption: '{rating} stars',
-                starCaptions: {
-                    1: 'One star - Very poor',
-
-                    2: 'Two stars - Poor',
-
-                    3: 'Three stars - Average',
-
-                    4: 'Four stars - Good',
-
-                    5: 'Five stars - Excellent!'
-                },
-                starTitles: {
-                    1: 'One star - Very poor',
-                    2: 'Two stars - Poor',
-                    3: 'Three stars - Average',
-                    4: 'Four stars - Good',
-                    5: 'Five stars - Excellent'
-
-                },
-                clearButtonTitle: 'Clear',
-                clearCaption: 'Not rated'
-            });
-
-            var msgCharactersLeftStart = "You have ";
-            var msgCharactersTooMany = " characters too many.";
-            var msgCharactersRemaining = " characters remaining.";
-
-            $("#rating-comments").on("keyup focus", function() {
-                var max = $(this).data("maxlength");
-                var len = $(this).val().length;
-                if (len > max) {
-                    var charExceeded = len - max;
-                    $(this).addClass("fieldError");
-                    $(this).next().html("<i class='fas fa-exclamation-circle text-red mrgn-rght-sm'></i>" + msgCharactersLeftStart + charExceeded + msgCharactersTooMany);
-                } else {
-                    var char = max - len;
-                    $(this).removeClass("fieldError").next().html("<i class='fas fa-info-circle text-blue mrgn-rght-sm'></i>" + msgCharactersLeftStart + char + msgCharactersRemaining);
-                }
-
-            });
-
-            $("#btnSubmitFeedback").on("click", function() {
-                $("#cnt-feedback").hide();
-                $("#cnt-feedback-confirm").removeClass("hidden").fadeIn(500).focus();
-            });
         });
     </script>
     <!-- InstanceEndEditable -->

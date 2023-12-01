@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Submit a firearms compensation claim: Step 2 of 4 - Firearms Buyback Program</title>
+    <title>Submit a firearms compensation claim: Step 2 of 4 - Add firearms - Firearms Buyback Program</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/utils.css">
     <link rel="stylesheet" href="../css/plugins.css">
     <link rel="stylesheet" href="../css/wizard.css">
+    <link rel="stylesheet" href="../js/ps/dropzone/dropzone.css" type="text/css" />
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -41,10 +42,10 @@
     <noscript>
         <link rel="stylesheet" href="../wet-boew/css/noscript.min.css" />
     </noscript>
-    <!-- InstanceBeginEditable name="CustomJSLibraries" -->
-    <!-- InstanceEndEditable -->
-    <!-- InstanceBeginEditable name="CustomCSS" -->
-    <!-- InstanceEndEditable -->
+
+
+
+
 </head>
 
 <body class="secondary" vocab="http://schema.org/" typeof="WebPage">
@@ -100,7 +101,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/menu-applicationOwner.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/default.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -121,6 +122,51 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><span class="hd-pre">Submit a firearms compensation claim:</span> Step 2 of 4</h1>
+
+        <div class="alert alert-danger mrgn-bttm-md" role="status">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><i class="fa-li fa fa-angle-right"></i>The selected file must be an Excel XLS or XLSX file.</li>
+
+                <li><i class="fa-li fa fa-angle-right"></i>The selected file may not be larger than 25 <abbr title="Megabytes">MB</abbr>. You will have to split your file into smaller file sizes and upload them separately.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>The selected file appears to be corrupted and cannot be read. Choose another file to upload.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>The selected file does not appear to have the required information in the first two columns. Please verify the file or use the template provided.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>The selected file could not be processed as the following firearms are not valid:
+                    <ul>
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fa-li fa fa-angle-right"></i>The selected file could not be processed as the following firearms have invalid serial numbers that are longer than 25 characters.
+                    <ul>
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+
+                        <li>
+                            <abbr title="Firearm reference number">FRN</abbr> {FRN number}
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
         <form method="get" action="submitRequest-review.html">
 
             <div class="row">
@@ -189,23 +235,50 @@
             <h2>Unregistered firearms</h2>
 
 
-
-
+            <h3>Upload a list of unregistered firearms</h3>
 
 
 
             <div class="well">
-                <h3 class="wb-inv">Total estimated compensation</h3>
-                <p>Your total estimated compensation is:</p>
-                <p class="h1">$34,000.00</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>You may upload a list of unregistered firearms using Excel XLS or XLSX formats.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fa-solid fa-file-arrow-down"></i> Download a template
+                        </a>
+                        <a href="#" class="mrgn-lft-md">Help using other files</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="list" class="mrgn-tp-sm">
+
+                            <form action="/file-upload" class="dropzone">
+
+                            </form>
+
+                            <div id="list" class="mrgn-tp-sm">
+
+                                <form action="/upload" class="dropzone">
+                                    <div class="dz-default dz-message"> Drop a XLS or XLSX file here or select a file to upload. <br>
+                                        <i class="fas fa-upload fa-3x text-grey opct-50 mrgn-tp-md"></i>
+                                    </div>
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
 
+            <hr>
+            <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Unregistered firearms</a>
 
 
-            <div class="nav-button">
-                <button class="btn btn-primary" type="submit">Continue</button>
-                <a href="submitRequest-step1.html" class="btn btn-link mrgn-lft-md">Go back</a>
-            </div>
         </form>
 
 
@@ -257,6 +330,7 @@
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../js/jquery/2.2.4/jquery.js"></script>
     <script src="../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../js/ps/dropzone/dropzone.js"></script>
 
     <!--<![endif]
         -->
