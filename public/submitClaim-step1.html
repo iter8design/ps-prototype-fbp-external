@@ -260,7 +260,7 @@
                 <footer class="panel-footer">
                     <div class="row">
                         <div class="col-md-4 col-xs-6 pddng-tp-sm">
-                            <button class="btn btn-primary mrgn-tp-md" type="submit">Set method of disposal</button> <button class="btn btn-default mrgn-tp-md mrgn-lft-md" type="submit">Remove</button>
+                            <button class="btn btn-primary mrgn-tp-md" type="submit">Set method of disposal</button> <button class="btn btn-default mrgn-tp-md mrgn-lft-md" type="button" id="btnRemove">Remove</button>
                         </div>
                         <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
                         <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
@@ -283,6 +283,16 @@
             </div>
         </form>
 
+
+        <section id="dlg_remove" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Remove {Make} {Model} (<abbr title="Firearm reference number">FRN</abbr> #{FRN number})</h2>
+            </header>
+            <div class="modal-body">
+                <p>You are about to remove {Make} {Model} (<abbr title="Firearm reference number">FRN</abbr> #{FRN number}) from your claim.</p>
+            </div>
+            <footer class="modal-footer"><a href="#" class="popup-modal-dismiss btn btn-primary pull-left">Remove this firearm</a> <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Cancel</a> </footer>
+        </section>
 
         <a id="helpBtn" class="btn btn-lg btn-primary wb-lbx" href="#dlg_help">
             <i class="fas fa-question-circle"></i>
@@ -457,8 +467,19 @@
                 else
                     checkbox.parent("td").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
             }
-        });
 
+
+
+        });
+        $(document).on("click", "#btnRemove", function(event) {
+            event.preventDefault();
+            $(document).trigger("open.wb-lbx", [
+                [{
+                    src: "#dlg_remove",
+                    type: "inline"
+                }]
+            ]);
+        });
         $(document).on("page.dt", ".wb-tables", function(event) {
             //Deselect the select all checkbox on paginate
             $("#selectAll").prop("checked", false);
