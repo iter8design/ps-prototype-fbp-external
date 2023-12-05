@@ -981,6 +981,24 @@ figure.thumbnail {
     line-height: normal;
 }
 
+#cn-messages li:hover {
+    background-color: #e7f0f5 !important;
+}
+
+#cn-messages-body a {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    width: 100%;
+    vertical-align: top;
+}
+
+#cn-messagesmessages {
+    margin-bottom: 0px;
+}
+
+
 #payment-summary {
     background-color: #EBF2FA;
     border-radius: 15px;
