@@ -108,7 +108,8 @@
                 <div class="row">
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
-                        <li>Account settings</li>
+                        <li><a href="#">Account settings</a></li>
+                        <li>Add a business</li>
                     </ol>
                 </div>
             </div>
@@ -121,154 +122,33 @@
 
         <h1 property="name" id="wb-cont">
             <span class="hd-pre">{First name} - {Last name}: {Operating name} ({Legal name})</span>
-            <span class="hd-icon"><i class="fa-solid fa-cog"></i></span>
-            <span class="hd-title">Account settings</span>
+            <span class="hd-icon"><i class="fa-solid fa-user-gear"></i></span>
+            <span class="hd-title">Add a business</span>
         </h1>
         <form method="get" action="#">
-            <div class="wb-tabs">
-                <div class="tabpanels">
-                    <details id="panel-accountDetails" open>
-                        <summary>Account details</summary>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p>The account information we have is based on your RCMP Business Web Services account. Should this information not be correct, please contact the <a href="#">Canadian Firearms Program</a> to update it.</p>
-                                <p>To update your language preferences, make the change and press the <strong>Save changes</strong> button.</p>
 
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <section class="panel panel-default panel-no-border">
-                                    <header class="panel-heading">
-                                        <h2 class="panel-title"> Contact information </h2>
-                                    </header>
-                                    <div class="panel-body">
-                                        <fieldset>
-                                            <legend class="wb-invisible"><span class="wb-invisible">Contact information</span></legend>
-                                            <div class="form-group">
-                                                <label for="email" class="label-form"><span class="mandatory" title="This field is mandatory">*</span>Business email address <strong class="required">(required)</strong>:</label>
-                                                <input name="email" type="email" id="email" value="nbergeron@gmail.com" size="50" maxlength="150" class="form-control full-width" autocomplete="email" />
-                                            </div>
+            <p>Add other businesses you have access to with RCMP Business Web Services to access them together:</p>
 
 
-                                            <div class="form-group">
-                                                <label for="language" class="label-form"><span class="mandatory" title="This field is required">*</span> Preferred language of communication<span class="wb-inv"> (required)</span>:</label>
-                                                <select class="form-control" id="language">
-                                                    <option value="English" selected>English</option>
-                                                    <option value="French">French</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <button type="submit" class="btn btn-primary" id="btnSave">Save changes</button>
-                                                </div>
-                                            </div>
-
-
-                                        </fieldset>
-                                    </div>
-                                </section>
-
-                            </div>
-
-                            <div class="col-md-6">
-                                <section class="panel panel-default panel-no-border">
-                                    <header class="panel-heading">
-                                        <h3 class="panel-title"> Business information </h3>
-                                    </header>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="label-form">Business name:</div>
-                                                <div>99999999 Canada Inc., operating as Acme Widget Company</div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-
-                                            <div class="col-md-12">
-                                                <div class="label-form">Mailing address:</div>
-                                                <address class="mrgn-bttm-0">
-                                                    123 Elm St. <br>
-                                                    Suite 201 <br>
-                                                    Ottawa, ON K1K 1K1
-                                                </address>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-
-
-                            </div>
-
-
-                        </div>
-
-                    </details>
-                    <details id="panel-related">
-                        <summary>Related accounts <span class="badge">2</span></summary>
-                        <h2 class="wb-inv">Related accounts</h2>
-                        <div class="row">
-                            <div class="col-md-12">
-
-                                <p>This individual has access to the following accounts:</p>
-
-
-                                <div class="row">
-                                    <div class="col-md-6 ">
-
-                                        <div class="panel panel-default panel-account hght-inhrt ">
-                                            <div class="panel-heading">
-
-                                                <h3 class="mrgn-tp-sm"><i class="fa fa-building opct-50 mrgn-rght-sm"></i><a href="#">Acme Widget company</a></h3>
-                                            </div>
-                                            <div class="panel-body">
-                                                <div class="form-group">
-                                                    <span class="label-upper">Address:</span><br>
-                                                    <address class="mrgn-bttm-0">
-                                                        9999 5th Avenue E <br>
-                                                        New York, NY 99999<br>
-                                                        United States
-                                                    </address>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Add a business</button>
-                            </div>
-                        </div>
-
-
-
-                    </details>
-
-                    <details id="panel-payment">
-                        <summary>Payment preferences</summary>
-                        <h2 class="wb-inv">Payment preferences</h2>
-                        <div class="row">
-                            <div class="col-md-12">
-
-                            </div>
-
-                        </div>
-
-
-
-                    </details>
-
-
-
-
-                </div>
+            <div class="form-group">
+                <label for="bln" class=""><span class="mandatory" title="This field is required">*</span> Business licence number<strong class="required" aria-hidden="true"> (required)</strong>:
+                    <span class="fld-example">This is a 12 digit number that appears on your firearms licence.</span>
+                </label>
+                <input name="bln" id="bln" type="text" size="14" class="form-control input-numeric-12" maxlength="12" required="required" data-rule-minlength="12" data-msg="Enter your business licence number" data-rule-digits="true">
             </div>
-            <hr>
-            <a href="../home.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a>
+
+            <div class="form-group">
+                <label for="bin" class=""><span class="mandatory" title="This field is required">*</span> Business identification number<strong class="required" aria-hidden="true"> (required)</strong>:
+                    <span class="fld-example">This is a 9 digit number provided to you when you registered for RCMP Business Web Services.</span>
+                </label>
+                <input name="bin" id="bin" type="text" size="11" class="form-control input-numeric-9" maxlength="9" required="required" data-rule-minlength="9" data-msg="Enter your business identification number." data-rule-digits="true">
+            </div>
+
+            <div class="nav-button">
+                <button type="submit" class="btn btn-primary">Add this business</button>
+                <a class="btn btn-default mrgn-lft-lg" href="#">Cancel</a>
+
+            </div>
         </form>
 
 
