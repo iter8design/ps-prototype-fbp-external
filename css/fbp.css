@@ -294,6 +294,12 @@ textarea.fieldError,
     font-size: 90%;
 }
 
+.gc-chckbxrdio legend {
+
+    font-size: 18px;
+    font-weight: normal;
+}
+
 .highlight-yellow,
 .table-striped > tbody > tr.highlight-yellow,
 .table > tbody > tr.highlight-yellow {
