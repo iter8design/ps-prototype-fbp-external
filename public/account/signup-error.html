@@ -108,16 +108,32 @@
         <div class="alert alert-danger mrgn-bttm-md" role="status">
             <h2>Attention</h2>
             <ol class="fa-ul">
-                <li><a href="#firstName"><i class="fa-li fa fa-angle-right"></i>Enter your first name.</a></li>
-                <li><a href="#lastName"><i class="fa-li fa fa-angle-right"></i>Enter your last name.</a></li>
-                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>Enter your email address.</a></li>
+                <li><a href="#firstName"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>Enter your first name.</a></li>
+                <li><a href="#lastName"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>Enter your last name.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>Enter your email address.</a></li>
+                <li><a href="#dob"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>Enter your date of birth.</a></li>
 
-                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered is not valid.</a></li>
-                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered may not be greater than 150 characters.</a></li>
+                <li><a href="#bln"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>Enter your business licence number.</a></li>
+                <li><a href="#bin"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>Enter your business identification number.</a></li>
+
+                <li><a href="#agreement"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>Indicate your agreement of all terms and conditions for this program.</a></li>
+
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>The email address entered is not valid.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i><span class="prefix">Error{x}:</span>The email address entered may not be greater than 150 characters.</a></li>
                 <li><a href="#givenName"><i class="fa-li fa fa-angle-right"></i>The first name entered may not be greater than 50 characters.</a></li>
                 <li><a href="#familyName"><i class="fa-li fa fa-angle-right"></i>The last name entered may not be greater than 50 characters.</a></li>
 
-                <li><a href="#dobDay"><i class="fa-li fa fa-angle-right"></i>Enter your day of birth.</a></li>
+                <li><a href="#dob"><i class="fa-li fa fa-angle-right"></i>The date of birth entered must occur between 1900 and 2024.</a></li>
+                <li><a href="#dob"><i class="fa-li fa fa-angle-right"></i>The date of birth entered is not a valid date.</a></li>
+                <li><a href="#dob"><i class="fa-li fa fa-angle-right"></i>The date of birth entered must not occur in the future.</a></li>
+
+
+                <li><a href="#bln"><i class="fa-li fa fa-angle-right"></i>The business licence number must be 12 digits long.</a></li>
+                <li><a href="#bin"><i class="fa-li fa fa-angle-right"></i>The business identification number must be 9 digits long.</a></li>
+
+
+                <!-- Old validation when date of birth was 3 fields
+                <!--<li><a href="#dobDay"><i class="fa-li fa fa-angle-right"></i>Enter your day of birth.</a></li>
                 <li><a href="#dobDay"><i class="fa-li fa fa-angle-right"></i>The day of birth entered may not be greater than 2 digits.</a></li>
                 <li><a href="#dobDay"><i class="fa-li fa fa-angle-right"></i>The day of birth entered must be between 1 and 31.</a></li>
 
@@ -128,11 +144,17 @@
                 <li><a href="#dobMonth"><i class="fa-li fa fa-angle-right"></i>The month of birth entered must be between 1 and 12.</a></li>
 
                 <li><a href="#dobYear"><i class="fa-li fa fa-angle-right"></i>Enter your year of birth.</a></li>
+
                 <li><a href="#dobYear"><i class="fa-li fa fa-angle-right"></i>The year of birth entered may not be greater than 4 digits.</a></li>
+
                 <li><a href="#dobYear"><i class="fa-li fa fa-angle-right"></i>The year of birth entered must occur between 1900 and 2024.</a></li>
                 <li><a href="#dobYear"><i class="fa-li fa fa-angle-right"></i>The date of birth entered is not a valid date.</a></li>
                 <li><i class="fa-li fa fa-angle-right"></i>The date of birth entered must not occur in the future.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>Indicate your agreement of all terms and conditions for this program.</li>
+                 -->
+
+
+
+
 
             </ol>
         </div>
@@ -160,21 +182,10 @@
                 </div>
 
                 <div class="form-group">
-                    <fieldset>
-                        <legend class="medium mrgn-bttm-0"><span class="mandatory" title="This field is required">*</span> Date of birth <strong class="required" aria-hidden="true"> (required)</strong>:</legend>
-                        <div class="display-inline-block">
-                            <label for="dobMonth" class="small">Month <span class="wb-inv">Format: 2 digits</span></label>
-                            <input name="dobMonth" id="dobMonth" type="text" size="2" maxlength="2" placeholder="MM" autocomplete="bday-month" class="form-control input-numeric-2 fieldError" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="The month of birth entered must be 2 digits long." data-rule-minlength="2" data-msg-minlength="The month of birth entered must be 2 digits long." data-msg-required="Enter your month of birth" data-rule-rangelength="[1,12]" data-msg-minlength="The month of birth entered must be between 1 and 12." data-msg-maxlength="The month of birth entered must be between 1 and 12." data-msg-rangelength="Test">
-                        </div>
-                        <div class="display-inline-block">
-                            <label for="dobDay" class="small">Day <span class="wb-inv">Format: 2 digits</span></label>
-                            <input name="dobDay" id="dobDay" type="text" size="2" maxlength="2" placeholder="DD" autocomplete="bday-day" class="form-control input-numeric-2 fieldError" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="The day of birth entered must be 2 digits long." data-rule-minlength="2" data-msg-minlength="The day of birth entered must be 2 digits long." data-msg-required="Enter your day of birth" data-rule-rangelength="[1,31]" data-msg-rangelength="The day of birth entered must be between 1 and 31.">
-                        </div>
-                        <div class="display-inline-block">
-                            <label for="dobYear" class="small">Year <span class="wb-inv">Format: 4 digits</span></label>
-                            <input name="dobYear" id="dobYear" type="text" size="4" maxlength="4" placeholder="YYYY" autocomplete="bday-year" class="form-control input-numeric-4 fieldError" required="required" pattern="[0-9]+" data-rule-digits=”true” data-msg-digits="The year of birth entered must be 2 digits long." data-rule-minlength="4" data-msg-minlength="The year of birth entered must be 4 digits long." data-msg-maxlength="Enter at least 4 digits for the year of birth." data-msg-required="Enter your year of birth">
-                        </div>
-                    </fieldset>
+                    <label for="dob"><span class="mandatory" title="This field is required">*</span> Date of birth <strong class="required" aria-hidden="true"> (required)</strong> <span class="wb-inv">Format: 4 digit year, 2 digit month, 2 digit day</span>: </label>
+                    <input name="dob" id="dob" type="text" size="11" class="form-control fieldError" autocomplete="bday" required="required" placeholder="YYYY-MM-DD" maxlength="10">
+
+
                 </div>
 
                 <div class="form-group">
@@ -186,7 +197,7 @@
 
                 <div class="form-group">
                     <label for="bin" class=""><span class="mandatory" title="This field is required">*</span> Business identification number<strong class="required" aria-hidden="true"> (required)</strong>:
-                        <span class="fld-example">This is a 9 digit number provided to you when you registered for RCMP Business Web Services.</span>
+                        <span class="fld-example">This is a 5 to 9 digit number provided to you when you registered for <abbr title="Royal Canadian Mounted Police">RCMP</abbr> Business Web Services.</span>
                     </label>
                     <input name="bin" id="bin" type="text" size="11" class="form-control input-numeric-9 fieldError" autocomplete="family-name" maxlength="9" required="required" data-rule-minlength="9" data-msg="Enter your business identification number." data-rule-digits="true">
                 </div>
@@ -368,7 +379,10 @@
             });
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
