@@ -112,9 +112,6 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Claims</a></li>
                         <li>Submit a firearms compensation claim: Step 2 of 4</li>
-
-                        <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <!-- InstanceEndEditable -->
                     </ol>
                 </div>
             </div>
@@ -261,69 +258,62 @@
 
             <div class="well">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p>You may upload a list of unregistered firearms using Excel XLS or XLSX formats.</p>
-                        <a href="#" class="btn btn-primary">
+                    <div class="col-md-12">
+                        <p><label for="fileUpload">You may upload a list of unregistered firearms using Excel XLSX format.</label></p>
+                        <a href="#" class="btn btn-default">
                             <i class="fa-solid fa-file-arrow-down"></i> Download a template
                         </a>
-                        <a href="#" class="mrgn-lft-md">Help using other files</a>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="list" class="mrgn-tp-sm">
+                        <hr>
+                        <div class="mrgn-tp-md mrgn-bttm-md">
+                            <input name="file" type="file" id="fileUpload" />
 
-                            <form action="/file-upload" class="dropzone">
-
-                            </form>
-
-                            <div id="list" class="mrgn-tp-sm">
-
-                                <form action="/upload" class="dropzone">
-                                    <div class="dz-default dz-message"> Drop a XLS or XLSX file here or select a file to upload. <br>
-                                        <i class="fas fa-upload fa-3x text-grey opct-50 mrgn-tp-md"></i>
-                                    </div>
-                                    <div class="fallback">
-                                        <input name="file" type="file" multiple />
-                                    </div>
-                                </form>
-
-
-                            </div>
                         </div>
+                        <a href="#dlg_processing" class="btn btn-primary wb-lbx">Upload file</a>
                     </div>
-
 
                 </div>
             </div>
+
+            <section id="dlg_processing" class="mfp-hide modal-dialog modal-content overlay-def">
+                <header class="modal-header">
+                    <h2 class="modal-title">Your file is being uploaded and verified</h2>
+                </header>
+                <div class="modal-body">
+                    <p>It may take a few minutes to process the firearms in the file uploaded. You will be notified when this has completed.</p>
+                </div>
+
+            </section>
+
+
 
             <hr>
             <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Unregistered firearms</a>
 
 
-        </form>
 
 
 
 
 
-        <div class="row">
-            <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
-                <dl id="wb-dtmd">
-                    <dt>Date modified:&#32;</dt>
-                    <dd>
-                        <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2023-12-01
-                            <!-- #EndDate -->
-                        </time>
-                        <span class="version">(V9.9.9)</span>
-                    </dd>
-                </dl>
+            <div class="row">
+                <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
+                    <dl id="wb-dtmd">
+                        <dt>Date modified:&#32;</dt>
+                        <dd>
+                            <time property="dateModified">
+                                <!-- #BeginDate format:IS1 -->2023-12-01
+                                <!-- #EndDate -->
+                            </time>
+                            <span class="version">(V9.9.9)</span>
+                        </dd>
+                    </dl>
 
-            </div>
-            <div class="col-xs-12 col-md-6 mrgn-tp-lg">
-                <div id="cn-accnt"><abbr title="Canadian Firearms Program">CFP</abbr> Business Licence Number <div class="account-number">99999999</div>
+                </div>
+                <div class="col-xs-12 col-md-6 mrgn-tp-lg">
+                    <div id="cn-accnt"><abbr title="Canadian Firearms Program">CFP</abbr> Business Licence Number <div class="account-number">99999999</div>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
     <footer role="contentinfo" id="wb-info">
         <div id="transactFooter" class="landscape"></div>
