@@ -128,8 +128,8 @@
                 <li><a href="#dob"><i class="fa-li fa fa-angle-right"></i>The date of birth entered must not occur in the future.</a></li>
 
 
-                <li><a href="#bln"><i class="fa-li fa fa-angle-right"></i>The business licence number must be 12 digits long.</a></li>
-                <li><a href="#bin"><i class="fa-li fa fa-angle-right"></i>The business identification number must be 9 digits long.</a></li>
+                <li><a href="#bln"><i class="fa-li fa fa-angle-right"></i>The business firearms licence number must be 8 digits long.</a></li>
+                <li><a href="#bin"><i class="fa-li fa fa-angle-right"></i>The business identification number must not be more than 9 digits long.</a></li>
 
 
                 <!-- Old validation when date of birth was 3 fields
@@ -189,10 +189,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="bln" class=""><span class="mandatory" title="This field is required">*</span> Business licence number<strong class="required" aria-hidden="true"> (required)</strong>:
-                        <span class="fld-example">This is a 12 digit number that appears on your business firearms licence.</span>
+                    <label for="bln" class=""><span class="mandatory" title="This field is required">*</span> Business firearms licence number<strong class="required" aria-hidden="true"> (required)</strong>:
+                        <span class="fld-example">This is the first 8 digits preceding the period found on your Business Firearms Licence. Do not enter the last 4 digits.</span>
                     </label>
-                    <input name="bln" id="bln" type="text" size="14" class="form-control input-numeric-12 fieldError" autocomplete="family-name" maxlength="12" required="required" data-rule-minlength="12" data-msg="Enter your business licence number" data-rule-digits="true">
+                    <input name="bln" id="bln" type="text" size="14" class="form-control input-numeric-8" maxlength="8" required="required" data-rule-minlength="12" data-msg="Enter your business firearms licence number" data-rule-digits="true">
                 </div>
 
                 <div class="form-group">
