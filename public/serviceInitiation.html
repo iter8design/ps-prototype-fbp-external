@@ -143,7 +143,7 @@
                                 <li>firearm reference number (FRN), make, model, serial number</li>
                             </ul>
                         </li>
-                        <li>list of all unregistered firearms you have including:
+                        <li>list of all <strong>unregistered</strong> firearms you have including:
                             <ul>
                                 <li>firearm reference number (FRN), make, model serial number, capacity/shots, calibre, </li>
                             </ul>
@@ -151,8 +151,42 @@
 
                     </ul>
                 </section>
-                <p><a href="submitClaim-step1.html" class="btn btn-lg btn-primary mrgn-tp-md">Begin claim</a></p>
+                <p><a href="#dlg_multiple" class="btn btn-lg btn-primary mrgn-tp-md wb-lbx">Begin claim</a></p>
             </div>
+
+            <section id="dlg_multiple" class="mfp-hide modal-dialog modal-content overlay-def">
+                <header class="modal-header">
+                    <h2 class="modal-title">Which business is this claim for?</h2>
+                </header>
+                <div class="modal-body">
+                    <fieldset class="gc-chckbxrdio">
+                        <legend class="small"><span class="mandatory" title="This field is required">*</span> Select a business to use for this claim <strong class="required" aria-hidden="true"> (required)</strong>:</legend>
+                        <ul class="list-unstyled lst-spcd-2">
+                            <li class="radio">
+                                <input type="radio" name="business" id="business1" checked>
+                                <label for="business1">Operating name ({Legal name})</label>
+                            </li>
+                            <li class="radio">
+                                <input type="radio" name="business" id="business2">
+                                <label for="business2">Operating name ({Legal name})</label>
+
+                            </li>
+
+                            <li class="radio">
+                                <input type="radio" name="business" id="business3">
+                                <label for="business3">Operating name ({Legal name})</label>
+
+                            </li>
+
+                        </ul>
+                    </fieldset>
+
+                </div>
+                <footer class="modal-footer"><a href="#" class="popup-modal-dismiss btn btn-primary pull-left">Continue</a> <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Cancel</a> </footer>
+            </section>
+
+
+
             <!-- InstanceEndEditable -->
             <div class="col-md-4">
                 <!-- InstanceBeginEditable name="GuidesHelp" -->
@@ -161,7 +195,7 @@
                     <h2>Guides and help</h2>
                     <ul class="lst-spcd">
                         <li><a href="#" target="_blank" title="This link will open in a new window">List of eligible firearms</a></li>
-                        <li><a href="#" target="_blank" title="This link will open in a new window">Disposal options</a></li>
+                        <li><a href="#" target="_blank" title="This link will open in a new window">Methods of disposal</a></li>
                         <li><a href="#" target="_blank" title="This link will open in a new window">Returning your firearms</a></li>
                     </ul>
 
