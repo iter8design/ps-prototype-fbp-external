@@ -124,6 +124,10 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
     border-bottom: solid #ddd 1px;
 } */
 
+.panel table.dataTable {
+    width: 99.8% !important;
+}
+
 .panel table.dataTable tr.even {
     background-color: #f8f8f8;
 }
