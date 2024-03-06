@@ -196,11 +196,11 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <p><label for="filter">Search for your firearm by firearm reference number, make, model, calibre, shots, or barrel length using the <abbr title="Royal Canadian Mounted Police">RCMP's</abbr> Firearm Reference Table:</label></p>
+                            <p><label for="filter">Search for your firearm by firearm reference number, make or model using the <abbr title="Royal Canadian Mounted Police">RCMP's</abbr> Firearm Reference Table:</label></p>
                             <div class="input-group">
 
                                 <input id="filter" name="filter" class="form-control full-width" size="35">
-                                <span class="input-group-addon"><i class="fas fa-search"></i></span>
+                                <span class="input-group-addon"><i class="fas fa-search"></i> Search</span>
                             </div>
                         </div>
                     </div>
@@ -217,8 +217,7 @@
                             <tr>
                                 <th scope="col" class="width5"><span class="wb-inv">Select</span></th>
                                 <th scope="col" class="width15">Firearm reference number (FRN)</th>
-                                <th scope="col" class="width25">Make </th>
-                                <th scope="col" class="width25">Model</th>
+                                <th scope="col" class="width25">Make/model </th>
                                 <th scope="col" class="width10">Calibre</th>
                                 <th scope="col" class="width10 text-right">Shots</th>
                                 <th scope="col" class="width15 text-right">Barrel length (<abbr title="millilmetre">mm</abbr>)</th>
@@ -235,8 +234,7 @@
                                 <td class="textFilter-match"><label for="frn1">{FRN}</label>
 
                                 </td>
-                                <td class="textFilter-match">{Make}</td>
-                                <td class="textFilter-match">{Model}</td>
+                                <td class="textFilter-match">{Make} {Model}</td>
                                 <td class="textFilter-match">{Calibre}</td>
                                 <td class="textFilter-match text-right">{Shots}</td>
                                 <td class="textFilter-match text-right">{Barrel length}</td>
@@ -251,11 +249,11 @@
                                 <td class="textFilter-match"><label for="frn1">{FRN}</label>
 
                                 </td>
-                                <td class="textFilter-match">{Make}</td>
-                                <td class="textFilter-match">{Model}</td>
-                                <td class="textFilter-match">{Calibre}</td>
-                                <td class="textFilter-match text-right">{Shots}</td>
-                                <td class="textFilter-match text-right">{Barrel length}</td>
+                                <td class="textFilter-match">{Make} {Model}</td>
+
+                                <td class="">{Calibre}</td>
+                                <td class=" text-right">{Shots}</td>
+                                <td class="text-right">{Barrel length}</td>
                             </tr>
                             <tr class="textFilter-target">
                                 <td>
@@ -267,11 +265,10 @@
                                 <td class="textFilter-match"><label for="frn1">{FRN}</label>
 
                                 </td>
-                                <td class="textFilter-match">{Make}</td>
-                                <td class="textFilter-match">{Model}</td>
-                                <td class="textFilter-match">{Calibre}</td>
-                                <td class="textFilter-match text-right">{Shots}</td>
-                                <td class="textFilter-match text-right">{Barrel length}</td>
+                                <td class="textFilter-match">{Make} {Model}</td>
+                                <td class="">{Calibre}</td>
+                                <td class="text-right">{Shots}</td>
+                                <td class="text-right">{Barrel length}</td>
                             </tr>
                             <tr class="textFilter-target">
                                 <td>
@@ -283,11 +280,10 @@
                                 <td class="textFilter-match"><label for="frn1">{FRN}</label>
 
                                 </td>
-                                <td class="textFilter-match">{Make}</td>
-                                <td class="textFilter-match">{Model}</td>
-                                <td class="textFilter-match">{Calibre}</td>
-                                <td class="textFilter-match text-right">{Shots}</td>
-                                <td class="textFilter-match text-right">{Barrel length}</td>
+                                <td class="textFilter-match">{Make} {Model}</td>
+                                <td class="">{Calibre}</td>
+                                <td class="text-right">{Shots}</td>
+                                <td class="text-right">{Barrel length}</td>
                             </tr>
                             <tr class="textFilter-target">
                                 <td>
@@ -299,11 +295,10 @@
                                 <td class="textFilter-match"><label for="frn1">{FRN}</label>
 
                                 </td>
-                                <td class="textFilter-match">{Make}</td>
-                                <td class="textFilter-match">{Model}</td>
-                                <td class="textFilter-match">{Calibre}</td>
-                                <td class="textFilter-match text-right">{Shots}</td>
-                                <td class="textFilter-match text-right">{Barrel length}</td>
+                                <td class="textFilter-match">{Make} {Model}</td>
+                                <td class="">{Calibre}</td>
+                                <td class="text-right">{Shots}</td>
+                                <td class="text-right">{Barrel length}</td>
                             </tr>
 
 
@@ -387,10 +382,7 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
