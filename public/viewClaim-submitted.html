@@ -129,28 +129,32 @@
         </h1>
 
         <div class="well">
+
             <div class="row">
-                <div class="col-md-2">
-                    Status:
+                <div class="col-md-4">
+                    <p>Status:</p>
+                    <span class="label label-warning large">Submitted</span> on October 14, 2024
+
+                    <div class="mrgn-tp-md"><a href="#" class="mrgn-tp-sm"><i class="fas fa-file-contract mrgn-rght-sm"></i>View your claim agreement</a></div>
+
+
+
+
+
                 </div>
-                <div class="col-md-10">
-                    Submitted
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    Total estimated compensation:
-                </div>
-                <div class="col-md-10">
-                    <strong class="large">$421,000.00</strong>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    Total number of firearms:
-                </div>
-                <div class="col-md-10">
-                    142
+
+                <div class="col-md-8 text-right text-middle">
+
+
+                    <div class="mrgn-tp-md">
+                        Total estimated compensation: <strong class="xlarge mrgn-lft-md">$421,000.00</strong>
+                    </div>
+
+
+                    <!--<div class="mrgn-tp-md">
+                        Compensation paid: <strong class="xlarge mrgn-lft-md">$0.00</strong>
+                    </div>-->
+
                 </div>
             </div>
         </div>
@@ -161,75 +165,79 @@
                     <summary>Summary</summary>
                     <div class="row">
                         <div class="col-md-12">
+                            <h2>Payments</h2>
+
+                            <p>No payments have been made yet.</p>
+
                             <h2>Shipments</h2>
 
                             <div class="alert alert-info">
                                 <p>An intake scheduler will be in touch with you soon to schedule your firearms for shipment back to a processing facility.</p>
                             </div>
 
-                            <h2>Deactivations</h2>
 
-                            <p>None of the firearms indicated on this claim are being deactivated.</p>
 
-                            <h2>Payments</h2>
-
-                            <p>No payments have been issued yet.</p>
 
                         </div>
                     </div>
                 </details>
-                <details id="panel-related">
-                    <summary>Registered firearms <span class="badge">122</span></summary>
+                <details id="panel-registerd">
+                    <summary>Registered firearms <span class="badge">4</span></summary>
                     <h2 class="wb-inv">Registered firearms</h2>
                     <div class="row">
                         <div class="col-md-12">
+
                             <div class="table-responsive">
-                                <table id="tbl-registered" class="wb-tables table table-hover" data-wb-tables='
-        {"info" : false, "filter" : true, "order" : [[2,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0, 4, 5]}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                                <table id="tbl-registered" class="table table-hover table-bordered">
                                     <thead>
                                         <tr>
 
                                             <th scope="col" class="width15 text-nowrap">Firearm reference <br> number (FRN)</th>
                                             <th scope="col">Make/model</th>
                                             <th scope="col" class="width20">Serial #</th>
-                                            <th scope="col" class="width20">Method of disposal <i class="fa-solid fa-circle-info"></i>
+                                            <th scope="col" class="width10">Method of disposal
                                             </th>
-                                            <th scope="col" class="width20 text-right">Estimated <br> compensation
+                                            <th scope="col" class="width15 text-right">Estimated <br> compensation
+                                            </th>
+                                            <th scope="col" class="width15">Status
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
 
-                                            <td><label for="ua1"><a href="#">144785-25</a></label></td>
+                                            <td>144785-25</td>
                                             <td>ADC 8833</td>
                                             <td>9938773873</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$200.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                         <tr>
-                                            <td><label for="ua2"><a href="#">13785-01</a></label></td>
+                                            <td>13785-01</td>
                                             <td>ADC ADC234</td>
                                             <td>999888333333</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$400.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                         <tr>
 
-                                            <td><label for="ua3"><a href="#">8888899</a></label></td>
+                                            <td>88888</td>
                                             <td>Adler B210</td>
                                             <td>111988222</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$1,000.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                         <tr>
 
-                                            <td><label for="ua3"><a href="#">488874-23</a></label></td>
+                                            <td>488874-23</td>
                                             <td>Adler B210</td>
                                             <td>4988829383</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$900.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -242,66 +250,124 @@
 
                 </details>
 
-                <details id="panel-payment">
-                    <summary>Unregistered firearms <span class="badge">20</span></summary>
+                <details id="panel-unregistered">
+                    <summary>Unregistered firearms <span class="badge">4</span></summary>
                     <h2 class="wb-inv">Unregistered firearms</h2>
-                    <p>Sed blandit ultricies lorem a posuere. Mauris consequat ligula a nibh tincidunt consectetur. Nunc quis lorem ex. Vivamus et sapien eget arcu rhoncus posuere. Nulla leo sem, lacinia ut tellus sed, pretium mollis lacus. </p>
+                    <p></p>
                     <div class="row">
                         <div class="col-md-12">
+
                             <div class="table-responsive">
-                                <table id="tbl-unregistered" class="wb-tables table table-hover" data-wb-tables='
-        {"info" : false, "filter" : true, "order" : [[2,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0, 4, 5]}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                                <table id="tbl-unregistered" class="table table-hover table-bordered">
                                     <thead>
                                         <tr>
 
                                             <th scope="col" class="width15 text-nowrap">Firearm reference <br> number (FRN)</th>
                                             <th scope="col">Make/model</th>
                                             <th scope="col" class="width20">Serial #</th>
-                                            <th scope="col" class="width20">Method of disposal <i class="fa-solid fa-circle-info"></i>
+                                            <th scope="col" class="width10">Method of disposal
                                             </th>
-                                            <th scope="col" class="width20 text-right">Estimated <br> compensation
+                                            <th scope="col" class="width15 text-right">Estimated <br> compensation
+                                            </th>
+                                            <th scope="col" class="width15">Status
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
 
-                                            <td><label for="ua1"><a href="#">144785-25</a></label></td>
+                                            <td>144785-25</td>
                                             <td>ADC 8833</td>
                                             <td>9938773873</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$200.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                         <tr>
-                                            <td><label for="ua2"><a href="#">13785-01</a></label></td>
+                                            <td>13785-01</td>
                                             <td>ADC ADC234</td>
                                             <td>999888333333</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$400.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                         <tr>
 
-                                            <td><label for="ua3"><a href="#">8888899</a></label></td>
+                                            <td>8888899</td>
                                             <td>Adler B210</td>
                                             <td>111988222</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$1,000.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                         <tr>
 
-                                            <td><label for="ua3"><a href="#">488874-23</a></label></td>
+                                            <td>488874-23</td>
                                             <td>Adler B210</td>
                                             <td>4988829383</td>
                                             <td>Turn in</td>
                                             <td class="text-right">$900.00</td>
+                                            <td>Not received</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
+
+
                         </div>
 
                     </div>
+                </details>
+
+                <details id="panel-parts">
+                    <summary>Parts and components <span class="badge">1</span></summary>
+                    <h2 class="wb-inv">Parts and components</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="table-responsive">
+                                <table id="tbl-parts" class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+
+
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Material</th>
+
+                                            <th scope="col" class="width15 text-center">Quantity claimed</th>
+                                            <th scope="col" class="width15 text-center">Quantity received</th>
+
+
+                                            <th scope="col" class="width15 text-right">Compensation amount per unit</th>
+                                            <th scope="col" class="width10  text-right">Estimated compensation amount
+                                            </th>
+                                            <th scope="col" class="width10  text-right">Revised compensation amount
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <td>Barrel</td>
+                                            <td>Blued</td>
+                                            <td class="text-right">10</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">$200.00</td>
+                                            <td class="text-right">$2,000.00</td>
+                                            <td class="text-right">$1,600.00</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </details>
 
 
@@ -373,6 +439,20 @@
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
+            /* Datatable */
+            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
+            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
+            $('.bottom, .top').addClass('dataTables_wrapper');
+            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
+            $(".first.paginate_button, .last.paginate_button").hide();
+            $(".dataTables_filter input").addClass("form-control").css({
+                "margin-bottom": "0px"
+            });;
+            $(".dataTables_filter label").css({
+                "margin-bottom": "0px"
+            });
+
 
 
 

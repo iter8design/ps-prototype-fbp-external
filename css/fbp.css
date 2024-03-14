@@ -97,8 +97,18 @@ strong.required {
     font-weight: 700;
 }
 
-thead tr {
+.table > tbody > tr > td.line-item {
+    padding-left: 20px;
+}
+
+
+tr.section {
     background-color: #f5f5f5;
+}
+
+thead tr,
+tfoot tr {
+    background-color: #eee;
 }
 
 ::-ms-clear {
