@@ -112,7 +112,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Claims</a></li>
                         <li><a href="#">Claim #CMS-9999-99999</a></li>
-                        <li>Payment - October 18, 2024</li>
+                        <li>Payment reference #{9999999999} - October 18, 2024</li>
                     </ol>
                 </div>
             </div>
@@ -127,7 +127,7 @@
 
             <span class="hd-pre">CMS-9999-99999</span>
             <span class="hd-icon"><i class="fas fa-money-check-alt"></i></span>
-            <span class="hd-title">Payment - October 18, 2024</span>
+            <span class="hd-title">Payment reference #{9999999999} - October 18, 2024</span>
         </h1>
 
 
@@ -476,13 +476,13 @@
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
-                                <th class="width15">Category</th>
-                                <th class="width30">Description</th>
-                                <th class="width15">Material</th>
+                                <th class="width15" scope="col">Category</th>
+                                <th class="width30" scope="col">Description</th>
+                                <th class="width15" scopoe="col">Material</th>
 
-                                <th class="width10 text-right">Quantity received</th>
-                                <th class="width10 text-right">Compensation amount per unit</th>
-                                <th class="width10 text-right">Amount paid</th>
+                                <th class="width10 text-right" scope="col">Quantity received</th>
+                                <th class="width10 text-right" scope="col">Compensation amount per unit</th>
+                                <th class="width10 text-right" scope="col">Amount paid</th>
                             </thead>
                             <tbody>
                                 <tr>
@@ -565,10 +565,12 @@
 
         <hr>
 
-        <p>Download or print a PDF version of this payment:</p>
+        <div class="well">
+            <p>Download or print a PDF version of this payment summary:</p>
 
-        <a class="btn btn-default" href="#"><i class="fa-solid fa-file-arrow-down mrgn-rght-sm"></i>PDF version</a>
+            <a class="btn btn-primary" href="#"><i class="fa-solid fa-file-arrow-down mrgn-rght-sm"></i>PDF version</a>
 
+        </div>
         <div class="info hidden-print">
 
             <h2 id="pdf"><abbr title="Portable Document Format">PDF</abbr> readers</h2>
