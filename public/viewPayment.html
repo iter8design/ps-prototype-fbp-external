@@ -52,7 +52,7 @@
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
     </ul>
-    <header role="banner">
+    <header>
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
@@ -77,7 +77,7 @@
                             Firearms Buyback Program</a>
                     </section>
 
-                    <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
+                    <nav class="col-sm-5 hidden-xs hidden-print">
                         <h2 class="wb-inv">Account menu</h2>
                         <ul class="app-list-account list-unstyled">
                             <li><a href="account/accountSettings.html" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account settings</a></li>
@@ -89,7 +89,7 @@
         </div>
         <div class="app-bar-mb">
             <div class="container visible-xs-block hidden-print">
-                <nav role="navigation">
+                <nav>
                     <!-- Adjust the following depending on search and/or menu settings -->
                     <h2 class="wb-inv">Search and menu</h2>
                     <ul class="app-list-main list-unstyled">
@@ -101,10 +101,10 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/default.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../includes/menus/default.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
-        <nav role="navigation" id="wb-bc" property="breadcrumb">
+        <nav id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
                 <div class="row">
@@ -120,7 +120,7 @@
 
 
     </header>
-    <main role="main" property="mainContentOfPage" class="container">
+    <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
 
         <h1 property="name" id="wb-cont">
@@ -139,15 +139,15 @@
 
         <h2>Payment summary</h2>
 
-        <table class="table table-bordered">
-            <tbody>
-                <thead>
+        <table class="table table-bordered" role="presentation">
+
+            <thead>
 
 
-                    <tr>
-                        <td colspan="3" class="text-right"><strong>Amount paid</strong></td>
-                    </tr>
-                </thead>
+                <tr>
+                    <td colspan="3" class="text-right"><strong>Amount paid</strong></td>
+                </tr>
+            </thead>
             <tbody>
                 <tr class="section">
                     <td colspan="3">
@@ -245,11 +245,14 @@
 
                     <div class="table-responsive">
                         <table class="table table-bordered">
+                            <caption class="wb-inv">List of all registered firearms turned in with amounts paid</caption>
                             <thead>
-                                <th class="width15">Firearm reference number (FRN)</th>
-                                <th class="width30">Make/model</th>
-                                <th class="width25">Serial number</th>
-                                <th class="width10 text-right">Amount paid</th>
+                                <tr>
+                                    <th class="width15" scope="col">Firearm reference number (FRN)</th>
+                                    <th class="width30" scope="col">Make/model</th>
+                                    <th class="width25" scope="col">Serial number</th>
+                                    <th class="width10 text-right" scope="col">Amount paid</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -316,7 +319,7 @@
                                         <div class="small mrgn-tp-md info">
 
                                             <p>This firearm was updated based on physical validation of the firearm received. Originally submitted as:</p>
-                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</p>
+                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</span></p>
                                         </div>
 
                                     </td>
@@ -352,11 +355,14 @@
 
                     <div class="table-responsive">
                         <table class="table table-bordered">
+                            <caption class="wb-inv">List of all registered firearms deactivated with amounts paid</caption>
                             <thead>
-                                <th class="width15">Firearm reference number (FRN)</th>
-                                <th class="width30">Make/model</th>
-                                <th class="width25">Serial number</th>
-                                <th class="width10 text-right">Amount paid</th>
+                                <tr>
+                                    <th class="width15">Firearm reference number (FRN)</th>
+                                    <th class="width30">Make/model</th>
+                                    <th class="width25">Serial number</th>
+                                    <th class="width10 text-right">Amount paid</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -366,7 +372,7 @@
                                         <div class="small mrgn-tp-md info">
 
                                             <p>This firearm was updated based on physical validation of the firearm received. Originally submitted as:</p>
-                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</p>
+                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</span></p>
                                         </div>
 
                                     </td>
@@ -398,11 +404,14 @@
 
                     <div class="table-responsive">
                         <table class="table table-bordered">
+                            <caption class="wb-inv">List of all unregistered firearms turned in with amounts paid</caption>
                             <thead>
-                                <th class="width15">Firearm reference number (FRN)</th>
-                                <th class="width30">Make/model</th>
-                                <th class="width25">Serial number</th>
-                                <th class="width10 text-right">Amount paid</th>
+                                <tr>
+                                    <th class="width15" scope="col">Firearm reference number (FRN)</th>
+                                    <th class="width30" scope="col">Make/model</th>
+                                    <th class="width25" scope="col">Serial number</th>
+                                    <th class="width10 text-right" scope="col">Amount paid</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -411,7 +420,7 @@
                                         <div class="small mrgn-tp-md info">
 
                                             <p>This firearm was updated based on physical validation of the firearm received. Originally submitted as:</p>
-                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</p>
+                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</span></p>
                                         </div>
 
                                     </td>
@@ -436,11 +445,14 @@
 
                     <div class="table-responsive">
                         <table class="table table-bordered">
+                            <caption class="wb-inv">List of all unregistered firearms deactivated with amounts paid</caption>
                             <thead>
-                                <th class="width15">Firearm reference number (FRN)</th>
-                                <th class="width30">Make/model</th>
-                                <th class="width25">Serial number</th>
-                                <th class="width10 text-right">Amount paid</th>
+                                <tr>
+                                    <th class="width15" scope="col">Firearm reference number (FRN)</th>
+                                    <th class="width30" scope="col">Make/model</th>
+                                    <th class="width25" scope="col">Serial number</th>
+                                    <th class="width10 text-right" scope="col">Amount paid</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -450,7 +462,7 @@
                                         <div class="small mrgn-tp-md info">
 
                                             <p>This firearm was updated based on physical validation of the firearm received. Originally submitted as:</p>
-                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</p>
+                                            <p>Rock River Arms LAR-6 <br> <span class="small">{Calibre}/{Barrel length}mm/{99} shots <br> Serial number 999999999 <br> Firearm reference number (FRN) 138196-3</span></p>
                                         </div>
 
                                     </td>
@@ -480,14 +492,17 @@
 
                     <div class="table-responsive">
                         <table class="table table-bordered">
+                            <caption class="wb-inv">List of all parts and components turned in with amounts paid</caption>
                             <thead>
-                                <th class="width15" scope="col">Category</th>
-                                <th class="width30" scope="col">Description</th>
-                                <th class="width15" scopoe="col">Material</th>
+                                <tr>
+                                    <th class="width15" scope="col">Category</th>
+                                    <th class="width30" scope="col">Description</th>
+                                    <th class="width15" scope="col">Material</th>
 
-                                <th class="width10 text-right" scope="col">Quantity received</th>
-                                <th class="width10 text-right" scope="col">Compensation amount per unit</th>
-                                <th class="width10 text-right" scope="col">Amount paid</th>
+                                    <th class="width10 text-right" scope="col">Quantity received</th>
+                                    <th class="width10 text-right" scope="col">Compensation amount per unit</th>
+                                    <th class="width10 text-right" scope="col">Amount paid</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -534,12 +549,15 @@
                     <h2 class="wb-inv" id="shipping">Shipping</h2>
                     <div class="table-responsive">
                         <table class="table table-bordered">
+                            <caption class="wb-inv">List of all shipments reimbursed</caption>
                             <thead>
-                                <th class="width15">Invoice number</th>
-                                <th class="width15">Tracking number</th>
-                                <th class="width30">Carrier</th>
-                                <th class="width10 text-center">Date sent <br> <abbr title="4 digit year, dash,  4 digit month, dash, 4 digit day">YYYY-MM-DD</abbr></th>
-                                <th class="width10 text-right">Amount paid</th>
+                                <tr>
+                                    <th class="width15" scope="col">Invoice number</th>
+                                    <th class="width15" scope="col">Tracking number</th>
+                                    <th class="width30" scope="col">Carrier</th>
+                                    <th class="width10 text-center" scope="col">Date sent <br> <abbr title="4 digit year, dash,  4 digit month, dash, 4 digit day">YYYY-MM-DD</abbr></th>
+                                    <th class="width10 text-right" scope="col">Amount paid</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -571,7 +589,7 @@
         <hr>
 
         <div class="well">
-            <p>Download or print a PDF version of this payment summary:</p>
+            <p>Download or print a <abbr title="Portable Document Format">PDF</abbr> version of this payment summary:</p>
 
             <a class="btn btn-primary" href="#"><i class="fa-solid fa-file-arrow-down mrgn-rght-sm"></i>PDF version</a>
 
@@ -622,7 +640,7 @@
             </div>
         </div>
     </main>
-    <footer role="contentinfo" id="wb-info">
+    <footer id="wb-info">
         <div id="transactFooter" class="landscape"></div>
         <div class="brand">
             <div class="container">
@@ -678,7 +696,10 @@
 
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
