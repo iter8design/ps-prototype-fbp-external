@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>View submitted claims - Assault-Style Firearm Compensation Program</title>
+    <title>Submit deactivation documentation - Assault-Style Firearm Compensation Program</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -110,7 +110,8 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Claims</a></li>
-                        <li>View claims</li>
+                        <li><a href="#">Firearm deactivations</a></li>
+                        <li>Submit deactivation documentation</li>
                     </ol>
                 </div>
             </div>
@@ -123,55 +124,49 @@
 
         <h1 property="name" id="wb-cont">
             <span class="hd-pre">{Operating name} ({Legal name})</span>
-            <span class="hd-icon"><i class="fas fa-envelope"></i></span>
-            <span class="hd-title">View claims</span>
+            <span class="hd-icon"><i class="fa-solid fa-gun-slash"></i></span>
+            <span class="hd-title">Submit deactivation documentation</span>
         </h1>
 
-
-        <div class="alert alert-warning">
-            <h2>Business firearms licence expired</h2>
-
-
-            <p>Your business firearms licence has expired. Claims can no longer be submitted until your licence is renewed. Please contact the <em>Canadian Firearms Program</em> to renew your licence.</p>
-
-        </div>
-
-
-
-        <p>Start a new claim, or access an existing one to:</p>
-        <ul>
-            <li>view your claim</li>
-            <li>edit claims in progress</li>
-        </ul>
-        <p>If you have any questions about your claim, please <a href="#">contact us</a>.</p>
+        <p>The following firearms were set to be deactivated as part of a claim. Select the firearm to upload proof of deactivation or to correct and resubmit as required.</p>
 
 
         <form action="viewDrones-error.html" method="get">
 
             <section class="panel panel-default panel-datatable">
-                <!--<header class="panel-heading pddng-tp-0">
+                <header class="panel-heading pddng-tp-0">
                     <div class="row">
                         <div class="col-md-6"> </div>
                         <div class="col-md-6 text-right text-left-sm text-left-xs">
                             <div class="form-inline">
                                 <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
-                                    <div class="tableFilter"></div>
+                                    <label for="filter" class="sr-only">Filter deactivations</label>
+                                    <select class="form-control" id="filter">
+                                        <option selected>All deactivations</option>
+                                        <option>Documentation required</option>
+
+                                        <option>Approved</option>
+                                        <option>Rejected</option>
+                                        <option>Paid</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </header>-->
+                </header>
                 <div class="table-responsive">
                     <table id="tbl-claims" class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : true, "order" : [[5,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : true, "targets": [1]}],
+        {"info" : false, "filter" : false, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : true, "targets": [1]}],
 "language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                         <thead>
                             <tr>
-                                <th scope="col" class="width20 text-nowrap">Claim #</th>
-                                <th scope="col" class="width15 text-right">Number of firearms,parts & components</th>
 
-                                <th scope="col" class="width10 text-right">Estimated compensation</th>
-                                <th scope="col" class="width15 text-center">Submitted on <br>
+                                <th scope="col" class="width20 text-nowrap">Firearm</th>
+
+                                <th scope="col" class="width20 text-nowrap">Claim #</th>
+
+                                <th scope="col" class="width10 text-right">Amount</th>
+                                <th scope="col" class="width15 text-center">Last updated <br>
                                     <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr>
                                 </th>
                                 <th scope="col" class="width20">Status</th>
@@ -179,40 +174,57 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><label for="claim1"><a href="v#">CMS-49829390-29383</a><br><span class="small">{Operating name} (Legal name)</span></label></td>
-                                <td class="text-right">142</td>
-                                <td class="text-right">$421,000.00</td>
+
+                                <td class="text-right"><a href="#">{Make/model}<br><span class="small">Serial #: {Serial number}</span></a>
+                                </td>
+                                <td><a href="v#">CMS-49829390-29383</a><br><span class="small">{Operating name} (Legal name)</span></td>
+
+                                <td class="text-right">$400.00</td>
                                 <td class="text-center">2024-10-28</td>
-                                <td><span class="label label-warning">Draft</span></td>
+                                <td><span class="label label-warning">Documentation required</span></td>
                             </tr>
                             <tr>
-                                <td><label for="claim2"><a href="v#">CMS-49829390-29387</a><br><span class="small">{Operating name} (Legal name)</span></label></td>
-                                <td class="text-right">35</td>
-                                <td class="text-right">$80,000.00</td>
-                                <td class="text-center">2024-10-20</td>
-                                <td><span class="label label-warning">Pending shipment</span></td>
-                            </tr>
-                            <tr>
-                                <td><label for="ua1"><a href="v#">CMS-49829390-38844</a><br><span class="small">{Operating name} (Legal name)</span></label></td>
-                                <td class="text-right">491</td>
-                                <td class="text-right">$900,000.00</td>
-                                <td class="text-center">2024-10-14</td>
+
+                                <td class="text-right"><a href="#">{Make/model} <br><span class="small">Serial #: {Serial number}</span></a></td>
+                                <td><a href="v#">CMS-49829390-29383</a><br><span class="small">{Operating name} (Legal name)</span></td>
+
+                                <td class="text-right">$400.00</td>
+                                <td class="text-center">2024-10-28</td>
                                 <td><span class="label label-primary">Submitted</span></td>
                             </tr>
                             <tr>
-                                <td><label for="ua1"><a href="v#">CMS-49829390-49923</a><br><span class="small">{Operating name} (Legal name)</span></label></td>
-                                <td class="text-right">9</td>
-                                <td class="text-right">$35,500.00</td>
-                                <td class="text-center">2024-10-01</td>
-                                <td><span class="label label-success">Completed</span></td>
-                            </tr>
 
+                                <td class="text-right"><a href="#">{Make/model} <br><span class="small">Serial #: {Serial number}</span></a></td>
+                                <td><a href="v#">CMS-49829390-29383</a><br><span class="small">{Operating name} (Legal name)</span></td>
+
+                                <td class="text-right">$400.00</td>
+                                <td class="text-center">2024-10-28</td>
+                                <td><span class="label label-success">Approved</span></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right"><a href="#">{Make/model} <br><span class="small">Serial #: {Serial number}</span></a></td>
+                                <td><a href="v#">CMS-49829390-29383</a><br><span class="small">{Operating name} (Legal name)</span></td>
+
+                                <td class="text-right">$400.00</td>
+                                <td class="text-center">2024-10-28</td>
+                                <td><span class="label label-danger">Rejected</span></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right"><a href="#">{Make/model} <br><span class="small">Serial #: {Serial number}</span></a></td>
+                                <td><a href="v#">CMS-49829390-29383</a><br><span class="small">{Operating name} (Legal name)</span></td>
+
+                                <td class="text-right">$400.00</td>
+                                <td class="text-center">2024-10-28</td>
+                                <td><span class="label label-success">Paid</span></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <footer class="panel-footer">
                     <div class="row">
-                        <div class="col-md-4 col-xs-6 pddng-tp-sm"><button class="btn btn-primary disabled">Submit a new claim </button> </div>
+                        <div class="col-md-4 col-xs-6 pddng-tp-sm"></div>
                         <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
                         <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
                     </div>
@@ -321,10 +333,7 @@
 
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
